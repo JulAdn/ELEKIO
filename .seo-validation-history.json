@@ -1,0 +1,21 @@
+{
+  "cycle": 8,
+  "last_report": "Cycle 8: 8/9 faits, 3 problèmes",
+  "completed": [
+    "8/9"
+  ],
+  "blockers": [
+    "index.html: title trop long (74 chars)",
+    "index.html: mention RGE/QualiPAC détectée",
+    "Header de contact.html diffère de la référence",
+    "contact.html: téléphone fictif détecté: 06 XX XX XX XX",
+    "realisations.html: adresse générique détectée",
+    "services.html: title trop long (75 chars)",
+    "contact.html: adresse générique détectée",
+    "Header de services.html diffère de la référence",
+    "contact.html: mention RGE/QualiPAC détectée",
+    "index.html: téléphone fictif détecté: 05 XX XX XX XX",
+    "realisations.html: mention RGE/QualiPAC détectée",
+    "Header de index.html diffère de la référence"
+  ]
+}

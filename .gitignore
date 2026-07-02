@@ -1,0 +1,11 @@
+# Elekio site - Git ignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Astro (incomplete project, deploy static HTML instead)
+/astro/
+
+# Markdown docs (not needed for deployment)
+*.md
