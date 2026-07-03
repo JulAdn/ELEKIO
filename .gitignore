@@ -9,3 +9,6 @@ Thumbs.db
 
 # Markdown docs (not needed for deployment)
 *.md
+
+# Wrangler cache
+.wrangler/
