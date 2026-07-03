@@ -86,19 +86,19 @@ button{touch-action:manipulation}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 
 /* ===== HEADER ===== */
-.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,12,66,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;box-shadow:0 2px 20px rgba(0,12,66,.08);border-bottom:1px solid rgba(0,12,66,.06)}
 .header .container{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:#fff;letter-spacing:1px}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px}
 .logo span{color:var(--copper)}
 .nav{display:flex;align-items:center;gap:4px}
-.nav a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:500;padding:8px 16px;border-radius:8px;transition:var(--transition)}
-.nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav a{color:rgba(0,12,66,.7);font-size:.9rem;font-weight:500;padding:8px 16px;border-radius:8px;transition:var(--transition)}
+.nav a:hover{color:var(--navy);background:rgba(0,12,66,.06)}
 .nav a.active{color:var(--copper);background:rgba(196,121,91,.12)}
 .nav-cta{touch-action:manipulation;background:var(--copper)!important;color:#fff!important;font-weight:700!important;padding:10px 22px!important}
 .nav-cta:hover{background:var(--copper-light)!important;transform:translateY(-1px);box-shadow:0 4px 15px rgba(196,121,91,.35)}
-.nav-phone{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.9)!important;font-weight:600!important}
+.nav-phone{display:flex;align-items:center;gap:8px;color:var(--navy)!important;font-weight:600!important}
 .menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-.menu-toggle span{display:block;width:26px;height:2.5px;background:#fff;border-radius:2px;transition:var(--transition)}
+.menu-toggle span{display:block;width:26px;height:2.5px;background:var(--navy);border-radius:2px;transition:var(--transition)}
 .menu-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .menu-toggle.active span:nth-child(2){opacity:0}
 .menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
@@ -249,8 +249,8 @@ button{touch-action:manipulation}
 
 <header class="header" id="header">
   <div class="container">
-    <a href="index.html" class="logo" aria-label="Elekio accueil" style="background:rgba(255,255,255,0.06);padding:6px 12px;border-radius:10px">
-      <img src="logo-elekio-header.png" alt="Elekio" style="height:70px;width:auto">
+    <a href="index.html" class="logo" aria-label="Elekio accueil">
+      <img src="logo-elekio-header.png" alt="Elekio" style="height:75px;width:auto">
 
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>

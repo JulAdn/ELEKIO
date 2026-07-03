@@ -134,27 +134,27 @@ button{touch-action:manipulation}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 
 /* ===== HEADER ===== */
-.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,12,66,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;box-shadow:0 2px 20px rgba(0,12,66,.08);border-bottom:1px solid rgba(0,12,66,.06)}
 .header .container{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:#fff;letter-spacing:1px}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px}
 .logo span{color:var(--copper)}
 .nav{display:flex;align-items:center;gap:4px}
-.nav a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:500;padding:8px 16px;border-radius:8px;transition:var(--transition)}
-.nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav a{color:rgba(0,12,66,.7);font-size:.9rem;font-weight:500;padding:8px 16px;border-radius:8px;transition:var(--transition)}
+.nav a:hover{color:var(--navy);background:rgba(0,12,66,.06)}
 .nav a.active{color:var(--copper);background:rgba(196,121,91,.12)}
 .nav-cta{touch-action:manipulation;background:var(--copper)!important;color:#fff!important;font-weight:700!important;padding:10px 22px!important}
 .nav-cta:hover{background:var(--copper-light)!important;transform:translateY(-1px);box-shadow:0 4px 15px rgba(196,121,91,.35)}
-.nav-phone{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.9)!important;font-weight:600!important}
+.nav-phone{display:flex;align-items:center;gap:8px;color:var(--navy)!important;font-weight:600!important}
 .menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-.menu-toggle span{display:block;width:26px;height:2.5px;background:#fff;border-radius:2px;transition:var(--transition)}
+.menu-toggle span{display:block;width:26px;height:2.5px;background:var(--navy);border-radius:2px;transition:var(--transition)}
 .menu-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .menu-toggle.active span:nth-child(2){opacity:0}
 .menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
 /* ===== MOBILE STICKY BAR ===== */
-.mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);padding:10px 16px;gap:10px}
+.mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#fff;border-top:1px solid #e5e7eb;padding:10px 16px;gap:10px}
 .mobile-sticky a{flex:1;text-align:center;padding:14px;border-radius:8px;font-weight:700;font-size:.95rem}
-.mobile-sticky .ms-call{background:transparent;border:2px solid var(--copper);color:#fff}
+.mobile-sticky .ms-call{background:transparent;border:2px solid var(--copper);color:var(--navy)}
 .mobile-sticky .ms-devis{background:var(--copper);color:#fff}
 
 /* ===== PAGE HERO (pages internes) ===== */
@@ -231,21 +231,21 @@ button{touch-action:manipulation}
 .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
 /* ===== FOOTER ===== */
-.footer{background:var(--navy);color:rgba(255,255,255,.7);padding:60px 0 0}
+.footer{background:#fff;color:var(--gray-600);padding:60px 0 0;border-top:1px solid #e5e7eb}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px}
 .footer-brand .logo{margin-bottom:16px}
 .footer-brand p{font-size:.88rem;line-height:1.7;max-width:300px}
-.footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:20px;position:relative;padding-bottom:10px}
+.footer h4{color:var(--navy);font-size:1rem;font-weight:700;margin-bottom:20px;position:relative;padding-bottom:10px}
 .footer h4::after{content:'';position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--copper)}
 .footer ul li{margin-bottom:10px}
-.footer ul li a{color:rgba(255,255,255,.55);font-size:.88rem;transition:var(--transition);display:inline-flex;align-items:center;gap:6px}
+.footer ul li a{color:var(--gray-500);font-size:.88rem;transition:var(--transition);display:inline-flex;align-items:center;gap:6px}
 .footer ul li a:hover{color:var(--copper);transform:translateX(3px)}
-.footer-contact li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px}
+.footer-contact li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--gray-500);margin-bottom:14px}
 .footer-contact li .fc-icon{color:var(--copper);flex-shrink:0;margin-top:2px}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding:20px 0;margin-top:48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.footer-bottom p{font-size:.82rem;color:rgba(255,255,255,.4)}
+.footer-bottom{border-top:1px solid #e5e7eb;padding:20px 0;margin-top:48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:.82rem;color:var(--gray-400)}
 .footer-socials{display:flex;gap:12px}
-.footer-socials a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:var(--transition);font-size:1rem}
+.footer-socials a{width:36px;height:36px;border-radius:50%;background:var(--bg-cream);display:flex;align-items:center;justify-content:center;transition:var(--transition);font-size:1rem}
 .footer-socials a:hover{background:var(--copper);color:var(--navy)}
 
 /* ===== ANIMATIONS ===== */
@@ -327,8 +327,8 @@ button{touch-action:manipulation}
 
 <header class="header" id="header">
   <div class="container">
-    <a href="index.html" class="logo" aria-label="Elekio accueil" style="background:rgba(255,255,255,0.06);padding:6px 12px;border-radius:10px">
-      <img src="logo-elekio-header.png" alt="Elekio" style="height:70px;width:auto">
+    <a href="index.html" class="logo" aria-label="Elekio accueil">
+      <img src="logo-elekio-header.png" alt="Elekio" style="height:75px;width:auto">
 
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
