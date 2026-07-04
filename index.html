@@ -6,7 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Elekio — Électricien Tarn 81 | Dépannage 4h</title>
 <meta name="description" content="Électricien Tarn 81 — Saint-Sulpice-la-Pointe. Dépannage urgence sous 4h, installation neuve, rénovation mise aux normes. Devis gratuit 24h. Garantie décennale. Appelez Julian au 06 80 50 67 09.">
-<meta name="theme-color" content="#000c42">
+<meta name="theme-color" content="#000c42" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme:dark)">
 <meta name="format-detection" content="telephone=yes">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -242,6 +243,7 @@ button{touch-action:manipulation}
   .btn{width:100%;justify-content:center}
   .cta-phone{width:100%;justify-content:center}
   .footer-bottom{flex-direction:column;text-align:center}
+  .logo img{height:45px!important}
 }
 @media(max-width:480px){
   .container{padding:0 16px}
@@ -249,9 +251,12 @@ button{touch-action:manipulation}
   .section-title{font-size:1.4rem}
   .zone-villes{grid-template-columns:1fr}
   .cta-title{font-size:1.5rem}
+  .hero h1{font-size:1.6rem}
+  .hero-card{padding:24px}
+  .hero-stat .num{font-size:1.5rem}
 }
 
-
+/* ===== DARK MODE ===== */
 /* === STYLES SPÉCIFIQUES À LA PAGE === */
 /* Styles spécifiques au hero de l'accueil */
 /* ===== HERO ===== */
@@ -305,7 +310,48 @@ button{touch-action:manipulation}
 @media(max-width:480px){
   .hero h1{font-size:1.6rem}
   .hero-card{padding:24px}
-  .hero-stat .num{font-size:1.5rem}
+/* ===== DARK MODE ===== */
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg-cream:#1e293b;
+    --bg-gray:#1e293b;
+    --gray-400:#64748b;
+    --gray-500:#94a3b8;
+    --gray-600:#cbd5e1;
+    --gray-700:#e2e8f0;
+    --shadow-sm:0 1px 3px rgba(0,0,0,.25);
+    --shadow-md:0 4px 20px rgba(0,0,0,.3);
+    --shadow-lg:0 10px 40px rgba(0,0,0,.35)
+  }
+  html{color-scheme:dark}
+  body{background:#0f172a;color:#e2e8f0}
+  .header{background:linear-gradient(100deg,#0f172a 27%,#c4795b 27.5%,#0f172a 27.5%,#0f172a 28%,#000c42 28.7%,#0f172a 28.7%,#0f172a 30%,#000c42 30.2%)!important}
+  .section-services,.section-zone,.footer{background:#1e293b}
+  .section-about{background:#1e293b}
+  .service-card{background:#334155;border-color:#475569}
+  .service-card:hover{border-color:var(--copper-dark)}
+  .service-card p{color:#94a3b8}
+  .service-icon{background:var(--navy-mid)}
+  .zone-ville{background:#334155;border-color:#475569;color:#e2e8f0}
+  .zone-dep{background:#334155;border-color:#475569;color:#e2e8f0}
+  .zone-cta{background:#334155;border-color:#475569}
+  .zone-cta h3{color:#e2e8f0}
+  .zone-cta p{color:#94a3b8}
+  .mobile-sticky{background:#1e293b;border-top-color:#475569}
+  .footer{border-top-color:#334155}
+  .footer h4{color:#e2e8f0}
+  .footer ul li a{color:#94a3b8}
+  .footer-contact li{color:#94a3b8}
+  .footer-bottom{border-top-color:#334155}
+  .footer-bottom p{color:#64748b}
+  .footer-socials a{background:#334155}
+  .about-badge{background:var(--navy-mid)}
+  .btn-white{background:#334155;color:#e2e8f0}
+  .btn-white:hover{background:#475569}
+  .section-title{color:#e2e8f0}
+  .section-subtitle{color:#94a3b8}
+  .about-text p{color:#94a3b8}
+  .about-text h3{color:#e2e8f0}
 }
 </style>
 </head>
