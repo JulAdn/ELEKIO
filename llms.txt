@@ -27,7 +27,7 @@ Communes : Saint-Sulpice-la-Pointe, Albi, Castres, Graulhet, Lavaur, Mazamet
 - À propos : https://elekio.fr/about.html
 - FAQ : https://elekio.fr/faq.html
 - Contact : https://elekio.fr/contact.html
-- Réalisations : https://elekio.fr/realisations.html
+- Tarifs & Devis : https://elekio.fr/realisations.html
 
 ## Points différenciants
 - Intervention urgence 4h garantie
