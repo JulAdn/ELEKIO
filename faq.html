@@ -634,6 +634,7 @@ button{touch-action:manipulation}
 </footer>
 
 <script>
+function toggleFaq(btn){var item=btn.closest('.faq-item');var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');});if(!isOpen){item.classList.add('open');}}
 document.getElementById('menuToggle').addEventListener('click',function(){this.classList.toggle('active');document.getElementById('mainNav').classList.toggle('open');});
 document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menuToggle').classList.remove('active');document.getElementById('mainNav').classList.remove('open');});});
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.style.animationPlayState='running';o.unobserve(e.target);}});},{threshold:0.1});document.querySelectorAll('.animate-fade-up').forEach(function(e){e.style.animationPlayState='paused';o.observe(e);});})();
