@@ -194,3 +194,18 @@ img{max-width:100%;display:block}
   .zone-villes{grid-template-columns:1fr}
   .cta-title{font-size:1.5rem}
 }
+
+/* ===== RESPONSIVE LOGO (toutes pages) ===== */
+@media(max-width:768px){
+  .logo img{height:44px!important;width:auto}
+}
+@media(max-width:480px){
+  .logo img{height:36px!important;width:auto}
+}
+
+/* ===== RESPONSIVE PAGE HERO ===== */
+@media(min-width:1400px){
+  .page-hero{padding:140px 0 100px}
+  .page-hero h1{font-size:3.2rem}
+  .container{max-width:1320px}
+}
