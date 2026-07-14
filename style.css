@@ -41,11 +41,10 @@ button{touch-action:manipulation}
 
 /* ===== HEADER ===== */
 .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#000c42;box-shadow:0 2px 20px rgba(0,0,0,.15)}
-.header .container{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 24px;height:72px}
+.header::before{content:'';position:absolute;top:0;left:0;width:310px;height:100%;background:linear-gradient(100deg,#fff 0,#fff 258px,#c4795b 258px,#c4795b 261px,#fff 261px,#fff 264px,#000c42 264px,#000c42 266px,#fff 266px,#fff 280px,transparent 280px);pointer-events:none;z-index:0}
+.header .container{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 24px;height:72px;position:relative;z-index:1}
 
-.logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px;background:#fff;padding:0 20px 0 0;position:relative;z-index:1}
-.logo span{color:var(--copper)}
-.logo::after{content:'';position:absolute;top:0;right:-30px;width:50px;height:100%;background:linear-gradient(90deg,transparent 20px,#c4795b 20px,#c4795b 23px,transparent 23px,transparent 25px,#000c42 25px,#000c42 27px,transparent 27px);transform-origin:top left;transform:skewX(10deg);pointer-events:none}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px;background:#fff}
 .nav{display:flex;align-items:center;gap:4px}
 .nav a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500;padding:8px 16px;border-radius:8px;transition:var(--transition)}
 .nav a:hover{color:#fff;background:rgba(255,255,255,.1)}
@@ -192,6 +191,7 @@ button{touch-action:manipulation}
   .footer-bottom{flex-direction:column;text-align:center}
   .logo img{height:45px!important}
   .header{background:#000c42!important}
+  .header::before{width:230px;background:linear-gradient(100deg,#fff 0,#fff 179px,#c4795b 179px,#c4795b 182px,#fff 182px,#fff 185px,#000c42 185px,#000c42 187px,#fff 187px,#fff 200px,transparent 200px)!important}
 }
 @media(max-width:480px){
   .container{padding:0 16px}
