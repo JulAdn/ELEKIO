@@ -64,6 +64,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 <link rel="stylesheet" href="style.css?v=1784029724">
+<style>
+/* ===== STYLES SPÉCIFIQUES AVIS ===== */
+.avis-intro{background:var(--bg-cream);padding:64px 0;text-align:center}
+.avis-intro p{max-width:700px;margin:0 auto;color:var(--gray-600);font-size:1.05rem;line-height:1.8}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testimonial-card{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);padding:32px 28px;transition:var(--transition);position:relative}
+.testimonial-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
+.testimonial-stars{color:#f59e0b;font-size:1.2rem;margin-bottom:16px;letter-spacing:2px}
+.testimonial-text{font-size:.95rem;color:var(--gray-600);line-height:1.7;margin-bottom:20px;font-style:italic}
+.testimonial-author{font-size:.85rem;color:var(--gray-400);font-weight:600;border-top:1px solid #f0f0f0;padding-top:16px}
+.testimonial-author .client-name{color:var(--gray-700);font-weight:700}
+.rating-summary{text-align:center;padding:48px 32px;background:var(--bg-cream);border:1px solid #e5e7eb;border-radius:var(--radius);max-width:600px;margin:0 auto}
+.rating-summary .big-num{font-size:3.5rem;font-weight:900;color:var(--navy);line-height:1}
+.rating-summary .stars-big{color:#f59e0b;font-size:1.8rem;margin:8px 0}
+.google-widget-placeholder{max-width:500px;margin:0 auto;background:#fff;border:2px dashed #d1d5db;border-radius:var(--radius);padding:48px 32px;text-align:center}
+@media(max-width:1024px){.testimonials-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.testimonials-grid{grid-template-columns:1fr}}
+</style>
+
 </head>
 <body style="background:#faf8f5!important">
 <!-- Google Tag Manager (noscript) -->
