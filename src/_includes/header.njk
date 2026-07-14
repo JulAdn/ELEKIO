@@ -1,20 +1,20 @@
 <header class="header" id="header">
   <div class="container">
-    <a href="/" class="logo" aria-label="Elekio accueil">
-      <img src="/logo-elekio-header.png" alt="Elekio" style="height:60px;width:auto">
+    <a href="{{ prefix }}index.html" class="logo" aria-label="Elekio accueil">
+      <img src="{{ prefix }}logo-elekio-header.png" alt="Elekio" style="height:60px;width:auto">
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="mainNav">
-      {% set is_home = page.url == '/' %}
-      <a href="/"{% if is_home %} class="active"{% endif %}>Accueil</a>
-      <a href="/services"{% if page.url == '/services/' %} class="active"{% endif %}>Services</a>
-      <a href="/realisations"{% if page.url == '/realisations/' %} class="active"{% endif %}>Réalisations</a>
-      <a href="/faq"{% if page.url == '/faq/' %} class="active"{% endif %}>FAQ</a>
-      <a href="/avis"{% if page.url == '/avis/' %} class="active"{% endif %}>Avis</a>
-      <a href="/a-propos"{% if page.url == '/a-propos/' %} class="active"{% endif %}>À propos</a>
-      <a href="/contact" class="nav-cta">Devis gratuit</a>
+      {% set is_home = page.url == '/' or page.url == '/index.html' %}
+      <a href="{{ prefix }}index.html"{% if is_home %} class="active"{% endif %}>Accueil</a>
+      <a href="{{ prefix }}services.html"{% if page.url == '/services.html' %} class="active"{% endif %}>Services</a>
+      <a href="{{ prefix }}realisations.html"{% if page.url == '/realisations.html' %} class="active"{% endif %}>Réalisations</a>
+      <a href="{{ prefix }}faq.html"{% if page.url == '/faq.html' %} class="active"{% endif %}>FAQ</a>
+      <a href="{{ prefix }}avis.html"{% if page.url == '/avis.html' %} class="active"{% endif %}>Avis</a>
+      <a href="{{ prefix }}about.html"{% if page.url == '/about.html' %} class="active"{% endif %}>À propos</a>
+      <a href="{{ prefix }}contact.html" class="nav-cta">Devis gratuit</a>
       <a href="tel:0680506709" class="nav-phone">📞 06 80 50 67 09</a>
     </nav>
   </div>
