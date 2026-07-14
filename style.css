@@ -187,7 +187,6 @@ button{touch-action:manipulation}
   .nav.open{display:flex}
   .menu-toggle{display:flex}
   .mobile-sticky{display:flex}
-  .logo img{height:45px!important}
 }
 @media(max-width:768px){
   .page-hero h1{font-size:1.9rem}
