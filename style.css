@@ -5,7 +5,7 @@
 
 /* ===== RESET ===== */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
+html{scroll-behavior:smooth;scroll-padding-top:80px;color-scheme:light}
 body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1e293b;line-height:1.6;background:#faf8f5;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
@@ -38,7 +38,7 @@ img{max-width:100%;display:block}
 .container{max-width:1440px;margin:0 auto;padding:0 24px}
 
 /* ===== HEADER ===== */
-.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(100deg,#fff 0%,#fff calc((100vw - min(1440px,100vw))/2 + 300px),#c4795b calc((100vw - min(1440px,100vw))/2 + 246px),#fff calc((100vw - min(1440px,100vw))/2 + 246px),#fff calc((100vw - min(1440px,100vw))/2 + 252px),#000c42 calc((100vw - min(1440px,100vw))/2 + 252px),#000c42 calc((100vw - min(1440px,100vw))/2 + 262px),#fff calc((100vw - min(1440px,100vw))/2 + 262px),#fff calc((100vw - min(1440px,100vw))/2 + 270px),#000c42 calc((100vw - min(1440px,100vw))/2 + 270px),#000c42 100%);box-shadow:0 2px 20px rgba(0,0,0,.15)}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(100deg,#fff min(280px,27%),#c4795b min(286px,27.5%),#fff min(286px,27.5%),#fff min(292px,28%),#000c42 min(298px,28.7%),#fff min(298px,28.7%),#fff min(310px,30%),#000c42 min(316px,30.2%),#000c42 100%);box-shadow:0 2px 20px rgba(0,0,0,.15)}
 .header .container{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 24px;height:72px}
 .logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px}
 .logo span{color:var(--copper)}
@@ -171,6 +171,7 @@ img{max-width:100%;display:block}
   .cta-title{font-size:2.2rem}
 }
 @media(max-width:768px){
+  .logo img{height:44px!important;width:auto}
   .nav{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(0,12,66,.98);flex-direction:column;padding:24px;gap:8px;border-bottom:1px solid rgba(255,255,255,.08)}
   .nav.open{display:flex}
   .menu-toggle{display:flex}
@@ -188,6 +189,7 @@ img{max-width:100%;display:block}
   .footer-bottom{flex-direction:column;text-align:center}
 }
 @media(max-width:480px){
+  .logo img{height:36px!important;width:auto}
   .container{padding:0 16px}
   .page-hero h1{font-size:1.6rem}
   .section-title{font-size:1.4rem}
