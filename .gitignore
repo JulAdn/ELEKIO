@@ -8,8 +8,15 @@ Thumbs.db
 /astro/
 
 # Markdown docs (not needed for deployment)
+# Exceptions: keep seo/guides/readme files
 *.md
+!README.md
+!GUIDE-MISE-EN-LIGNE.md
+!SEOLOG.md
+!strategie-seo-elekio.md
 
 # Wrangler cache
 .wrangler/
 sitescrape_elekio/
+node_modules/
+_site/
