@@ -40,7 +40,7 @@ button{touch-action:manipulation}
 .container{max-width:1440px;margin:0 auto;padding:0 24px}
 
 /* ===== HEADER ===== */
-.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(100deg,#fff 20%,#c4795b 20%,#c4795b 27.5%,#fff 27.5%,#fff 28%,#000c42 28%,#000c42 28.7%,#fff 28.7%,#fff 30%,#000c42 30%,#000c42 100%);box-shadow:0 2px 20px rgba(0,0,0,.15)}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(100deg,#fff 20%,#c4795b 27.5%,#fff 27.5%,#fff 28%,#000c42 28.7%,#fff 28.7%,#fff 30%,#000c42 30.2%);box-shadow:0 2px 20px rgba(0,0,0,.15)}
 .header .container{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 24px;height:72px}
 
 .logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px}
@@ -190,7 +190,7 @@ button{touch-action:manipulation}
   .cta-phone{width:100%;justify-content:center}
   .footer-bottom{flex-direction:column;text-align:center}
   .logo img{height:45px!important}
-  .header{background:linear-gradient(100deg,#fff 20%,#c4795b 20%,#c4795b 22%,#fff 22%,#fff 23%,#000c42 23%,#000c42 24%,#fff 24%,#fff 25%,#000c42 25%,#000c42 100%)!important}
+  .header{background:linear-gradient(100deg,#fff 20%,#c4795b 22%,#fff 22%,#fff 23%,#000c42 24%,#fff 24%,#fff 25%,#000c42 26%,#000c42 100%)!important}
 }
 @media(max-width:480px){
   .container{padding:0 16px}
@@ -267,5 +267,5 @@ body{background:#faf8f5!important;color:#1e293b!important}
 
 /* Header - écrans larges : limiter la partie blanche */
 @media(min-width:1200px){
-  .header{background:linear-gradient(100deg,#fff min(20%,240px),#c4795b min(20%,240px),#c4795b min(22%,264px),#fff min(22%,264px),#fff min(23%,276px),#000c42 min(23%,276px),#000c42 min(24%,288px),#fff min(24%,288px),#fff min(25%,300px),#000c42 min(25%,300px),#000c42 100%)}
+  .header{background:linear-gradient(100deg,#fff min(20%,240px),#c4795b min(22%,264px),#fff min(22%,264px),#fff min(23%,276px),#000c42 min(24%,288px),#fff min(24%,288px),#fff min(25%,300px),#000c42 min(26%,312px),#000c42 100%)}
 }
