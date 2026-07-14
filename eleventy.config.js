@@ -6,6 +6,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/style.css": "style.css" });
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/sitemap.xml": "sitemap.xml" });
+  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   // Copier les assets racine (logo, favicon, etc.)
   const rootAssets = [
@@ -14,7 +16,6 @@ module.exports = function (eleventyConfig) {
     "favicon.png",
     "apple-touch-icon.png",
     "robots.txt",
-    "sitemap.xml",
   ];
   rootAssets.forEach((file) => {
     const src = path.join(__dirname, file);
