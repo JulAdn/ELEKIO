@@ -258,3 +258,9 @@ button{touch-action:manipulation}
   .hero h1{font-size:1.6rem}
   .hero-card{padding:24px}
 /* Version 1784029461 - cache buster */
+
+/* Force light mode - résiste au dark mode navigateur */
+body{background:#faf8f5!important;color:#1e293b!important}
+.footer{background:#ffffff!important;color:#475569!important}
+.footer-bottom{border-top-color:#e5e7eb!important}
+.footer h4,.footer p,.footer li,.footer a{color:inherit!important}
