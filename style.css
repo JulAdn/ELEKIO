@@ -190,7 +190,7 @@ button{touch-action:manipulation}
   .cta-phone{width:100%;justify-content:center}
   .footer-bottom{flex-direction:column;text-align:center}
   .logo img{height:45px!important}
-  .header{background:linear-gradient(100deg,#fff 0%,#fff calc((100vw - min(1440px,100vw))/2 + 290px),#c4795b calc((100vw - min(1440px,100vw))/2 + 246px),#fff calc((100vw - min(1440px,100vw))/2 + 246px),#fff calc((100vw - min(1440px,100vw))/2 + 252px),#000c42 calc((100vw - min(1440px,100vw))/2 + 252px),#000c42 calc((100vw - min(1440px,100vw))/2 + 262px),#fff calc((100vw - min(1440px,100vw))/2 + 262px),#fff calc((100vw - min(1440px,100vw))/2 + 270px),#000c42 calc((100vw - min(1440px,100vw))/2 + 270px),#000c42 100%)!important}
+  .header{background:linear-gradient(100deg,#fff 20%,#c4795b 22%,#fff 22%,#fff 23%,#000c42 24%,#fff 24%,#fff 25%,#000c42 26%,#000c42 100%)!important}
 }
 @media(max-width:480px){
   .container{padding:0 16px}
