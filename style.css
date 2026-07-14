@@ -257,3 +257,4 @@ button{touch-action:manipulation}
 @media(max-width:480px){
   .hero h1{font-size:1.6rem}
   .hero-card{padding:24px}
+/* Version 1784029461 - cache buster */
