@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test angle bands</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#222;padding:40px;font-family:monospace}
+  h2{color:#fff;margin:30px 0 10px}
+  .bar{height:72px;margin-bottom:5px;position:relative;border:1px solid #555}
+  .lbl{color:#aaa;font-size:11px;margin-bottom:20px}
+  
+  /* Reference: original 100deg gradient */
+  .orig{background:linear-gradient(100deg,#fff 27%,#c4795b 27.5%,#fff 27.5%,#fff 28%,#000c42 28.7%,#fff 28.7%,#fff 30%,#000c42 30.2%)}
+  
+  /* skew +10deg top left */
+  .skew-p10{background:#000c42}
+  .skew-p10::before{content:'';position:absolute;inset:0;background:#fff;background-image:linear-gradient(90deg,transparent 27%,#c4795b 27%,#c4795b 27.5%,transparent 27.5%,transparent 28%,#000c42 28%,#000c42 28.7%,transparent 28.7%,transparent 30%,#000c42 30%);transform-origin:top left;transform:skewX(10deg);clip-path:inset(0)}
+  
+  /* skew -10deg top left */
+  .skew-n10{background:#000c42}
+  .skew-n10::before{content:'';position:absolute;inset:0;background:#fff;background-image:linear-gradient(90deg,transparent 27%,#c4795b 27%,#c4795b 27.5%,transparent 27.5%,transparent 28%,#000c42 28%,#000c42 28.7%,transparent 28.7%,transparent 30%,#000c42 30%);transform-origin:top left;transform:skewX(-10deg);clip-path:inset(0)}
+  
+  /* skew +10deg bottom left */
+  .skew-p10b{background:#000c42}
+  .skew-p10b::before{content:'';position:absolute;inset:0;background:#fff;background-image:linear-gradient(90deg,transparent 27%,#c4795b 27%,#c4795b 27.5%,transparent 27.5%,transparent 28%,#000c42 28%,#000c42 28.7%,transparent 28.7%,transparent 30%,#000c42 30%);transform-origin:bottom left;transform:skewX(10deg);clip-path:inset(0)}
+  
+  /* skew -10deg bottom left */
+  .skew-n10b{background:#000c42}
+  .skew-n10b::before{content:'';position:absolute;inset:0;background:#fff;background-image:linear-gradient(90deg,transparent 27%,#c4795b 27%,#c4795b 27.5%,transparent 27.5%,transparent 28%,#000c42 28%,#000c42 28.7%,transparent 28.7%,transparent 30%,#000c42 30%);transform-origin:bottom left;transform:skewX(-10deg);clip-path:inset(0)}
+  
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .col{overflow:hidden;border-radius:4px}
+</style>
+</head>
+<body>
+<h2>🔍 Comparaison : original 100deg vs skew</h2>
+<div class="grid">
+  <div class="col">
+    <div class="bar orig"></div>
+    <div class="lbl">✅ ORIGINAL linear-gradient(100deg, …)</div>
+    
+    <div class="bar skew-p10"></div>
+    <div class="lbl">skewX(10deg) · top left</div>
+    
+    <div class="bar skew-n10"></div>
+    <div class="lbl">skewX(-10deg) · top left ← ACTUEL</div>
+  </div>
+  <div class="col">
+    <div class="bar orig" style="background:linear-gradient(80deg,#fff 27%,#c4795b 27.5%,#fff 27.5%,#fff 28%,#000c42 28.7%,#fff 28.7%,#fff 30%,#000c42 30.2%)"></div>
+    <div class="lbl">80deg (pour comparaison inverse)</div>
+    
+    <div class="bar skew-p10b"></div>
+    <div class="lbl">skewX(10deg) · bottom left</div>
+    
+    <div class="bar skew-n10b"></div>
+    <div class="lbl">skewX(-10deg) · bottom left</div>
+  </div>
+</div>
+<p style="color:#888;margin-top:30px;font-size:12px">↑ Laquelle des 6 versions (hors 80deg) correspond le mieux à l'original (1ère barre) ?</p>
+</body>
+</html>
