@@ -1,6 +1,10 @@
+# Redirection domaine racine → www (évite le duplicate content)
+https://elekio.fr/* https://www.elekio.fr/:splat 301
+
 # Redirections des anciennes URLs .html vers les nouvelles
 /services.html /services 301
 /about.html /a-propos 301
+/about /a-propos 301
 /contact.html /contact 301
 /faq.html /faq 301
 /realisations.html /realisations 301

@@ -40,8 +40,9 @@ button{touch-action:manipulation}
 .container{max-width:1440px;margin:0 auto;padding:0 24px}
 
 /* ===== HEADER ===== */
-.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(100deg,#fff 27%,#c4795b 27.5%,#fff 27.5%,#fff 28%,#000c42 28.7%,#fff 28.7%,#fff 30%,#000c42 30.2%);box-shadow:0 2px 20px rgba(0,0,0,.15)}
-.header .container{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 24px;height:72px}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#000c42;box-shadow:0 2px 20px rgba(0,0,0,.15)}
+.header::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;background-image:linear-gradient(90deg,transparent 27%,#c4795b 27%,#c4795b 27.5%,transparent 27.5%,transparent 28%,#000c42 28%,#000c42 28.7%,transparent 28.7%,transparent 30%,#000c42 30%);transform-origin:bottom left;transform:skewX(10deg);pointer-events:none;z-index:0;clip-path:inset(0)}
+.header .container{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 24px;height:72px;position:relative;z-index:1}
 
 .logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px}
 .logo span{color:var(--copper)}
@@ -190,7 +191,8 @@ button{touch-action:manipulation}
   .cta-phone{width:100%;justify-content:center}
   .footer-bottom{flex-direction:column;text-align:center}
   .logo img{height:45px!important}
-  .header{background:linear-gradient(100deg,#fff 27%,#c4795b 28.5%,#fff 28.5%,#fff 29%,#000c42 29.7%,#fff 29.7%,#fff 31%,#000c42 31.2%,#000c42 100%)!important}
+  .header{background:#000c42!important}
+  .header::before{background-image:linear-gradient(90deg,transparent 27%,#c4795b 27%,#c4795b 28.5%,transparent 28.5%,transparent 29%,#000c42 29%,#000c42 29.7%,transparent 29.7%,transparent 31%,#000c42 31%)!important}
 }
 @media(max-width:480px){
   .container{padding:0 16px}
@@ -267,5 +269,6 @@ body{background:#faf8f5!important;color:#1e293b!important}
 
 /* Header - écrans larges : limiter la partie blanche */
 @media(min-width:1200px){
-  .header{background:linear-gradient(100deg,#fff min(27%,240px),#c4795b min(27.5%,246px),#fff min(27.5%,246px),#fff min(28%,252px),#000c42 min(28.7%,258px),#fff min(28.7%,258px),#fff min(30%,270px),#000c42 min(30.2%,276px),#000c42 100%)}
+  .header{background:#000c42}
+  .header::before{background-image:linear-gradient(90deg,transparent 240px,#c4795b 240px,#c4795b 246px,transparent 246px,transparent 252px,#000c42 252px,#000c42 258px,transparent 258px,transparent 270px,#000c42 270px)}
 }
