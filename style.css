@@ -264,3 +264,8 @@ body{background:#faf8f5!important;color:#1e293b!important}
 .footer{background:#ffffff!important;color:#475569!important}
 .footer-bottom{border-top-color:#e5e7eb!important}
 .footer h4,.footer p,.footer li,.footer a{color:inherit!important}
+
+/* Header - écrans larges : limiter la partie blanche */
+@media(min-width:1200px){
+  .header{background:linear-gradient(100deg,#fff min(20%,240px),#c4795b min(22%,264px),#fff min(22%,264px),#fff min(23%,276px),#000c42 min(24%,288px),#fff min(24%,288px),#fff min(25%,300px),#000c42 min(26%,312px),#000c42 100%)}
+}
