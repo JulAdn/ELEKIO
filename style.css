@@ -38,10 +38,10 @@ button{touch-action:manipulation}
   /* Header — zone blanche + bandes */
   --container-width:1440px;
   --logo-zone:290px;
-  --stripe-copper:6px;
-  --stripe-white-1:6px;
-  --stripe-blue:10px;
-  --stripe-white-2:8px;
+  --stripe-copper:3px;
+  --stripe-white-1:3px;
+  --stripe-blue:5px;
+  --stripe-white-2:4px;
   --stripe-start:calc((100vw - min(var(--container-width),100vw)) / 2 + var(--logo-zone));
   --band-end:calc(var(--stripe-start) + var(--stripe-copper) + var(--stripe-white-1) + var(--stripe-blue) + var(--stripe-white-2))
 }
@@ -182,7 +182,7 @@ button{touch-action:manipulation}
   .page-hero h1{font-size:2.2rem}
   .cta-title{font-size:2.2rem}
 }
-@media(max-width:1000px){
+@media(max-width:1200px){
   .nav{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(0,12,66,.98);flex-direction:column;padding:24px;gap:8px;border-bottom:1px solid rgba(255,255,255,.08)}
   .nav.open{display:flex}
   .menu-toggle{display:flex}
