@@ -41,7 +41,7 @@ button{touch-action:manipulation}
 
 /* ===== HEADER ===== */
 .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#000c42;box-shadow:0 2px 20px rgba(0,0,0,.15)}
-.header::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;background-image:linear-gradient(90deg,transparent 27%,#c4795b 27%,#c4795b 27.3%,transparent 27.3%,transparent 28%,#000c42 28%,#000c42 28.4%,transparent 28.4%,transparent 30%,#000c42 30%);transform-origin:top left;transform:skewX(-10deg);pointer-events:none;z-index:0;clip-path:inset(0)}
+.header::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;background-image:linear-gradient(90deg,transparent 22%,#c4795b 22%,#c4795b 22.3%,transparent 22.3%,transparent 23%,#000c42 23%,#000c42 23.4%,transparent 23.4%,transparent 25%,#000c42 25%);transform-origin:top left;transform:skewX(-10deg);pointer-events:none;z-index:0;clip-path:inset(0)}
 .header .container{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 24px;height:72px;position:relative;z-index:1}
 
 .logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px}
@@ -192,7 +192,7 @@ button{touch-action:manipulation}
   .footer-bottom{flex-direction:column;text-align:center}
   .logo img{height:45px!important}
   .header{background:#000c42!important}
-  .header::before{background-image:linear-gradient(90deg,transparent 27%,#c4795b 27%,#c4795b 27.8%,transparent 27.8%,transparent 29%,#000c42 29%,#000c42 29.4%,transparent 29.4%,transparent 31%,#000c42 31%)!important}
+  .header::before{background-image:linear-gradient(90deg,transparent 22%,#c4795b 22%,#c4795b 22.8%,transparent 22.8%,transparent 24%,#000c42 24%,#000c42 24.4%,transparent 24.4%,transparent 26%,#000c42 26%)!important}
 }
 @media(max-width:480px){
   .container{padding:0 16px}
@@ -270,5 +270,5 @@ body{background:#faf8f5!important;color:#1e293b!important}
 /* Header - écrans larges : limiter la partie blanche */
 @media(min-width:1200px){
   .header{background:#000c42}
-  .header::before{background-image:linear-gradient(90deg,transparent 240px,#c4795b 240px,#c4795b 243px,transparent 243px,transparent 252px,#000c42 252px,#000c42 254px,transparent 254px,transparent 270px,#000c42 270px)}
+  .header::before{background-image:linear-gradient(90deg,transparent 200px,#c4795b 200px,#c4795b 203px,transparent 203px,transparent 212px,#000c42 212px,#000c42 214px,transparent 214px,transparent 230px,#000c42 230px)}
 }
