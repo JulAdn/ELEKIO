@@ -40,8 +40,9 @@ button{touch-action:manipulation}
 .container{max-width:1440px;margin:0 auto;padding:0 24px}
 
 /* ===== HEADER ===== */
-.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(100deg,#ffffff 27%,#c4795b 28.5%,#ffffff 28.5%,#ffffff 29%,#000c42 29.7%,#ffffff 29.7%,#ffffff 31%,#000c42 31.2%)!important;box-shadow:0 2px 20px rgba(0,0,0,.15);forced-color-adjust:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.header .container{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 24px;height:72px}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background-color:#ffffff!important;box-shadow:0 2px 20px rgba(0,0,0,.15);forced-color-adjust:none;-webkit-print-color-adjust:exact;print-color-adjust:exact;color-scheme:only light}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(100deg,transparent 27%,#c4795b 28.5%,transparent 28.5%,transparent 29%,#000c42 29.7%,transparent 29.7%,transparent 31%,#000c42 31.2%,#000c42 100%);pointer-events:none;z-index:0;forced-color-adjust:none}
+.header .container{display:flex;align-items:center;justify-content:space-between;max-width:1440px;margin:0 auto;padding:0 24px;height:72px;position:relative;z-index:1}
 
 .logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:900;color:var(--navy);letter-spacing:1px}
 .logo span{color:var(--copper)}
@@ -190,7 +191,8 @@ button{touch-action:manipulation}
   .cta-phone{width:100%;justify-content:center}
   .footer-bottom{flex-direction:column;text-align:center}
   .logo img{height:38px!important;max-width:160px!important}
-  .header{background:linear-gradient(100deg,#ffffff 42%,#c4795b 44%,#ffffff 44%,#ffffff 45%,#000c42 46%,#ffffff 46%,#ffffff 47%,#000c42 48%,#000c42 100%)!important}
+  .header{background-color:#ffffff!important}
+  .header::before{background:linear-gradient(100deg,transparent 50%,#c4795b 52%,transparent 52%,transparent 53%,#000c42 54%,transparent 54%,transparent 55%,#000c42 56%,#000c42 100%)!important}
 }
 @media(max-width:480px){
   .container{padding:0 16px}
@@ -261,12 +263,13 @@ button{touch-action:manipulation}
 
 /* Force light mode - résiste au dark mode navigateur */
 body{background:#faf8f5!important;color:#1e293b!important;forced-color-adjust:none}
-.header,.header *{forced-color-adjust:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.header,.header *{forced-color-adjust:none;-webkit-print-color-adjust:exact;print-color-adjust:exact;background-color:#ffffff!important}
 .footer{background:#ffffff!important;color:#475569!important}
 .footer-bottom{border-top-color:#e5e7eb!important}
 .footer h4,.footer p,.footer li,.footer a{color:inherit!important}
 
 /* Header - écrans larges : limiter la partie blanche */
 @media(min-width:1200px){
-  .header{background:linear-gradient(100deg,#ffffff min(27%,240px),#c4795b min(28.5%,246px),#ffffff min(28.5%,246px),#ffffff min(29%,252px),#000c42 min(29.7%,258px),#ffffff min(29.7%,258px),#ffffff min(31%,264px),#000c42 min(31.2%,270px),#000c42 100%)!important}
+  .header{background-color:#ffffff!important}
+  .header::before{background:linear-gradient(100deg,transparent min(27%,240px),#c4795b min(28.5%,246px),transparent min(28.5%,246px),transparent min(29%,252px),#000c42 min(29.7%,258px),transparent min(29.7%,258px),transparent min(31%,264px),#000c42 min(31.2%,270px),#000c42 100%)!important}
 }
