@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.elekio.fr/#organization",
+  "name": "Elekio",
+  "description": "Électricien professionnel à Saint-Sulpice-la-Pointe (81). Dépannage, installation, rénovation, mise aux normes et domotique. Intervention rapide Tarn et départements limitrophes.",
+  "url": "https://www.elekio.fr",
+  "email": "contact@elekio.fr",
+  "telephone": "0650505050",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Saint-Sulpice-la-Pointe",
+    "postalCode": "81370",
+    "addressRegion": "Tarn",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.774, "longitude": 1.682 },
+  "areaServed": [
+    { "@type": "State", "name": "Tarn (81)" },
+    { "@type": "State", "name": "Haute-Garonne (31)" },
+    { "@type": "State", "name": "Tarn-et-Garonne (82)" },
+    { "@type": "State", "name": "Aveyron (12)" },
+    { "@type": "State", "name": "Hérault (34)" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00" }
+  ],
+  "priceRange": "€€",
+  "founder": { "@type": "Person", "name": "Julian AUDOUIN" }
+});
+
+const stats = [
+  { valeur: '8', label: 'ans d\'expérience' },
+  { valeur: '+600', label: 'chantiers réalisés' },
+  { valeur: '4h', label: 'délai urgence' },
+  { valeur: '98%', label: 'clients satisfaits' },
+];
+
+const services = [
+  { titre: 'Dépannage express', description: 'En panne ? Intervention sous 4 heures, 24h/24 et 7j/7.', icone: 'zap' },
+  { titre: 'Installation neuve', description: 'Construction ou extension : câblage complet, tableau, prises et luminaires.', icone: 'home' },
+  { titre: 'Rénovation électrique', description: 'Installation ancienne ? Remise aux normes de A à Z, en sécurité totale.', icone: 'shield' },
+  { titre: 'Diagnostic & DPE', description: 'Vente, location ou vérification : bilan complet de votre installation.', icone: 'clipboard' },
+  { titre: 'Mise aux normes tableau', description: 'Tableau vétuste ? On le modernise avec protections et disjoncteurs.', icone: 'wrench' },
+  { titre: 'Domotique Smart Home', description: 'Pilotez éclairages, volets, chauffage depuis votre smartphone.', icone: 'lightbulb' },
+];
+
+const temoignages = [
+  { prenom: 'Sébastien', ville: 'Gaillac', note: 5, texte: 'Panne totale un vendredi soir. Julian était chez moi à 22h30. En 40 minutes tout était réglé. Prix plus que correct vu l\'heure. Je recommande sans hésiter.' },
+  { prenom: 'Christine', ville: 'Albi', note: 5, texte: 'Rénovation complète de notre maison de 1965. 6 jours de chantier, chaque soir tout était nettoyé. Prix exactement celui du devis. Transparence totale !' },
+  { prenom: 'Philippe', ville: 'Castres', note: 5, texte: 'Diagnostic électrique pour vendre mon appartement. Pris en 48h, rapport clair avec photos. Petites anomalies corrigées, vente conclue sereinement.' },
+];
+---
+
+<BaseLayout
+  title="Électricien Tarn (81) — Elekio | Dépannage & Installation"
+  description="Julian AUDOUIN, électricien qualifié à Saint-Sulpice-la-Pointe (81). Dépannage urgent 4h, installation, rénovation, domotique. Devis gratuit 24h. Intervention Tarn, Haute-Garonne, Tarn-et-Garonne."
+  schema={schema}
+>
+
+  <!-- HERO -->
+  <HeroSection
+    titre="Votre électricien de confiance dans le Tarn"
+    sousTitre="Dépannage en 4h, installations neuves, rénovation aux normes. Julian Audouin intervient 7j/7 dans le Tarn et départements limitrophes."
+    badges={['Intervention sous 4h', 'Qualifelec certifié', 'Garantie décennale']}
+  />
+
+  <!-- STATS -->
+  <section class="relative -mt-10 mb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {stats.map((stat, i) => (
+          <div class="bg-white rounded-2xl p-5 md:p-6 shadow-lg text-center animate-on-scroll border border-gray-100" style={`transition-delay: ${i * 0.1}s`}>
+            <div class="text-3xl md:text-4xl font-black text-elekio-copper mb-1">{stat.valeur}</div>
+            <div class="text-sm text-gray-500 font-medium">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÉSENTATION JULIAN -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-5 gap-10 items-center">
+        <!-- Photo placeholder -->
+        <div class="md:col-span-2 flex justify-center animate-on-scroll">
+          <div class="relative">
+            <div class="w-56 h-56 md:w-64 md:h-64 rounded-2xl bg-elekio-navy flex items-center justify-center shadow-2xl overflow-hidden">
+              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="38" cy="35" r="18" fill="#c4795b" opacity="0.8"/>
+                <ellipse cx="38" cy="75" rx="35" ry="20" fill="#c4795b" opacity="0.3"/>
+              </svg>
+            </div>
+            <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-elekio-copper text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">Julian, Fondateur</span>
+          </div>
+        </div>
+        <!-- Texte -->
+        <div class="md:col-span-3 animate-on-scroll">
+          <h2 class="section-title">Un électricien <span class="text-elekio-copper">passionné</span> à votre service</h2>
+          <p class="text-gray-600 leading-relaxed text-lg mb-6">
+            Je m'appelle Julian Audouin, 28 ans, électricien diplômé d'un BTS Électrotechnique. Après plusieurs années chez ABB puis EFOR, j'ai fondé Elekio pour proposer une électricité transparente, propre et sans mauvaise surprise.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Mon engagement : des interventions rapides, un travail soigné et des prix justes, point.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="badge bg-elekio-navy text-white border-elekio-navy !px-4 !py-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              BTS Électrotechnique
+            </span>
+            <span class="badge bg-elekio-navy text-white border-elekio-navy !px-4 !py-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Qualifelec
+            </span>
+            <span class="badge bg-elekio-navy text-white border-elekio-navy !px-4 !py-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              RGE
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="section-title">Nos <span class="text-elekio-copper">services</span></h2>
+        <p class="section-subtitle mx-auto">De la panne soudaine à la maison connectée, Elekio prend en charge tous vos projets électriques.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((s, i) => (
+          <div class="animate-on-scroll" style={`transition-delay: ${i * 0.08}s`}>
+            <ServiceCard titre={s.titre} description={s.description} icone={s.icone} />
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-10">
+        <a href="/services" class="btn-outline">
+          Voir tous nos services
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONE INTERVENTION -->
+  <section class="py-16 md:py-20 bg-elekio-navy relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,121,91,0.12)_0%,transparent_60%)]" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-4 animate-on-scroll">
+        Intervention <span class="text-elekio-copper">80 km</span> autour de Saint-Sulpice
+      </h2>
+      <p class="text-lg text-white/70 max-w-2xl mx-auto mb-8 animate-on-scroll">
+        Tarn (81), Haute-Garonne (31), Tarn-et-Garonne (82), Aveyron (12), Hérault (34).<br/>
+        De Gaillac à Albi, Toulouse, Castres ou Montauban : on se déplace partout, rapidement.
+      </p>
+      <div class="flex flex-wrap justify-center gap-2 animate-on-scroll">
+        {['Albi', 'Gaillac', 'Castres', 'Toulouse', 'Montauban', 'Lavaur', 'Mazamet', 'Saint-Sulpice', 'Rabastens', 'Graulhet'].map(ville => (
+          <span class="px-4 py-2 bg-white/10 text-white/80 rounded-full text-sm font-medium border border-white/10 hover:bg-elekio-copper hover:border-elekio-copper hover:text-white transition-all cursor-default">{ville}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="section-title">Ils nous font <span class="text-elekio-copper">confiance</span></h2>
+        <p class="section-subtitle mx-auto">Des clients satisfaits, des vrais. Orange mécanique, on ne sait pas faire.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {temoignages.map((t, i) => (
+          <div class="animate-on-scroll" style={`transition-delay: ${i * 0.1}s`}>
+            <TestimonialCard prenom={t.prenom} ville={t.ville} note={t.note} texte={t.texte} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-16 md:py-20 bg-elekio-navy relative overflow-hidden">
+    <div class="absolute inset-0" aria-hidden="true">
+      <div class="absolute top-0 right-0 w-80 h-80 bg-elekio-copper/15 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+    </div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-4 animate-on-scroll">
+        Prêt à <span class="text-elekio-copper">discuter</span> de votre projet ?
+      </h2>
+      <p class="text-lg text-white/70 mb-8 animate-on-scroll">
+        Devis gratuit sous 24h, réponse en 2 heures, intervention rapide. C'est maintenant que ça se passe.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll">
+        <a href="/contact" class="btn-primary !text-lg !px-10 !py-4">
+          Demander mon devis gratuit
+        </a>
+        <a href="tel:0650505050" class="btn-secondary !text-lg !px-10 !py-4">
+          06 50 50 50 50
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

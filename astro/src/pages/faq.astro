@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: 'Quel est votre délai d\'intervention en cas d\'urgence ?',
+    reponse: 'Notre engagement est simple : intervention sous 4 heures maximum après votre appel, 24h/24 et 7j/7. Dans les faits, notre temps moyen d\'intervention en zone proche (Tarn, nord Haute-Garonne) est de 2 heures. Nous nous déplaçons avec un véhicule entièrement équipé, ce qui nous permet de résoudre 95% des pannes en une seule visite.',
+  },
+  {
+    question: 'Comment sont calculés vos tarifs ?',
+    reponse: 'Tous nos tarifs sont transparents et détaillés dans un devis écrit avant toute intervention. Pour un dépannage, nous facturons un forfait déplacement (selon la distance depuis Saint-Sulpice-la-Pointe) + un taux horaire de main d\'œuvre. Pour les travaux, le devis détaille chaque poste : fournitures, main d\'œuvre, durée estimée. Le prix indiqué est le prix final. Pas de mauvaise surprise, jamais.',
+  },
+  {
+    question: 'Dans quelles zones intervenez-vous ?',
+    reponse: 'Elekio est basé à Saint-Sulpice-la-Pointe dans le Tarn (81) et intervient dans un rayon de 80 km, couvrant l\'ensemble du Tarn, le nord de la Haute-Garonne (31), le sud-est du Gers (82), le sud de l\'Aveyron (12) et l\'ouest de l\'Hérault (34). Albi, Gaillac, Castres, Lavaur, Toulouse, Montauban : nous nous déplaçons partout.',
+  },
+  {
+    question: 'Quelle garantie offre Elekio sur ses travaux ?',
+    reponse: 'Tous nos travaux sont couverts par notre garantie décennale obligatoire : votre installation est protégée pendant 10 ans. De plus, nous appliquons une garantie de parfait achèvement pendant 1 an : si quoi que ce soit ne fonctionne pas comme prévu, nous revenons gratuitement. Les équipements que nous fournissons bénéficient de la garantie constructeur (2 à 5 ans selon les marques).',
+  },
+  {
+    question: 'Fournissez-vous des devis gratuits ?',
+    reponse: 'Oui, systématiquement. Le devis est gratuit, sans engagement, et valable 30 jours. Nous nous déplaçons pour évaluer votre installation et comprendre précisément vos besoins. Le devis vous est remis sous 48 heures maximum après la visite, par email ou en main propre. Il détaille chaque prestation avec son prix unitaire.',
+  },
+];
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.reponse.replace(/<[^>]*>/g, '')
+    }
+  }))
+});
+---
+
+<BaseLayout
+  title="FAQ — Elekio | Électricien Tarn (81)"
+  description="Questions fréquentes : délai d'intervention, tarifs, zone de déplacement, garantie, devis gratuit. Électricien à Saint-Sulpice-la-Pointe (81)."
+  schema={faqSchema}
+>
+
+  <!-- Hero -->
+  <section class="bg-elekio-navy py-14 md:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h1 class="text-3xl md:text-5xl font-black text-white mb-4 animate-fade-in">
+        Questions <span class="text-elekio-copper">fréquentes</span>
+      </h1>
+      <p class="text-lg text-white/70 animate-slide-up">
+        Tout ce que vous devez savoir avant de faire appel à Elekio. Pas de jargon, du concret.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="space-y-4">
+        {faqs.map((faq, i) => (
+          <details class="group bg-gray-50 rounded-2xl border border-gray-100 transition-all duration-200 hover:border-elekio-copper/20 animate-on-scroll" style={`transition-delay: ${i * 0.07}s`}>
+            <summary class="flex items-center justify-between cursor-pointer p-5 md:p-6 font-semibold text-elekio-navy text-lg list-none">
+              <span class="pr-4">{faq.question}</span>
+              <span class="shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center group-open:bg-elekio-copper group-open:text-white transition-all shadow-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-open:hidden"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="hidden group-open:block"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600 leading-relaxed">
+              {faq.reponse}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-elekio-navy">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-4">Vous ne trouvez pas votre réponse ?</h2>
+      <p class="text-white/70 mb-8">Appelez-moi ou écrivez-moi directement. Je réponds à toutes les questions, sans engagement.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary !text-lg !px-8 !py-4">Formulaire de contact</a>
+        <a href="tel:0650505050" class="btn-secondary !text-lg !px-8 !py-4">06 50 50 50 50</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

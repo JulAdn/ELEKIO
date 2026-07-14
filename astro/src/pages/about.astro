@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+
+const valeurs = [
+  { titre: 'Transparence', description: 'Devis détaillé, pas de coût caché. Vous savez exactement ce que vous payez et pourquoi.', icone: 'search' },
+  { titre: 'Propreté', description: 'Un chantier n\'est pas une décharge. On aspire, on nettoie, on repart en laissant les lieux impeccables.', icone: 'sparkles' },
+  { titre: 'Respect des délais', description: 'Un rendez-vous pris, c\'est un rendez-vous honoré. On arrive à l\'heure, on termine dans les temps.', icone: 'clock' },
+];
+
+const certifications = [
+  { nom: 'Qualifelec', description: 'Marque de qualification délivrée aux électriciens dont les compétences techniques et administratives sont vérifiées chaque année par un organisme indépendant.' },
+  { nom: 'RGE', description: 'Label Reconnu Garant de l\'Environnement vous permettant de bénéficier d\'aides comme MaPrimeRénov\' ou les CEE pour vos travaux de rénovation.' },
+  { nom: 'Garantie décennale', description: 'Tous nos travaux sont couverts par une assurance responsabilité civile décennale. Votre installation protégée pendant 10 ans.' },
+];
+---
+
+<BaseLayout
+  title="À propos — Julian AUDOUIN | Elekio Électricien Tarn"
+  description="Découvrez Julian AUDOUIN, fondateur d'Elekio, électricien diplômé (BTS Électrotechnique) à Saint-Sulpice-la-Pointe. Ex-ABB et EFOR. Qualifelec, RGE, garantie décennale."
+>
+
+  <HeroSection
+    titre="L'histoire d'un électricien <span class='text-elekio-copper'>passionné</span>"
+    sousTitre="De l'industrie à l'artisanat, Julian Audouin a choisi de mettre son expertise au service des particuliers du Tarn."
+    badges={['BTS Électrotechnique', 'Ex-ABB & EFOR', 'Qualifelec']}
+  />
+
+  <!-- Bio -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-5 gap-10 items-start">
+        <!-- Photo -->
+        <div class="md:col-span-2 flex flex-col items-center animate-on-scroll">
+          <div class="w-48 h-48 md:w-56 md:h-56 rounded-2xl bg-elekio-navy flex items-center justify-center shadow-2xl mb-4">
+            <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="38" cy="35" r="18" fill="#c4795b" opacity="0.8"/>
+              <ellipse cx="38" cy="75" rx="35" ry="20" fill="#c4795b" opacity="0.3"/>
+            </svg>
+          </div>
+          <span class="text-elekio-copper font-bold text-lg">Julian AUDOUIN</span>
+          <span class="text-gray-500 text-sm">Fondateur d'Elekio</span>
+        </div>
+
+        <!-- Texte -->
+        <div class="md:col-span-3 animate-on-scroll">
+          <h2 class="text-2xl md:text-3xl font-black text-elekio-navy mb-4">Mon parcours</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Titulaire d'un BTS Électrotechnique obtenu à Albi, j'ai forgé mon expertise pendant 5 ans chez <strong>ABB</strong>, leader mondial de l'équipement électrique, puis 3 ans chez <strong>EFOR</strong>, bureau d'études spécialisé en infrastructures électriques industrielles.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            En 2022, à 26 ans, je lance <strong>Elekio</strong> avec une ambition claire : réconcilier les particuliers avec leur électricien. Fini le professionnel injoignable qui ne rappelle pas. Fini les devis opaques. Fini le chantier laissé en plan.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Elekio, c'est la promesse d'une électricité simple, propre et transparente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valeurs -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="section-title text-center mb-12 animate-on-scroll">Mes <span class="text-elekio-copper">engagements</span></h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {valeurs.map((v, i) => (
+          <div class="animate-on-scroll bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 text-center" style={`transition-delay: ${i * 0.1}s`}>
+            <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-elekio-navy text-elekio-copper mb-5">
+              {v.icone === 'search' && <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>}
+              {v.icone === 'sparkles' && <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>}
+              {v.icone === 'clock' && <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>}
+            </div>
+            <h3 class="text-lg font-bold text-elekio-navy mb-2">{v.titre}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">{v.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="section-title text-center mb-4 animate-on-scroll">Certifications & <span class="text-elekio-copper">garanties</span></h2>
+      <p class="text-center text-gray-600 mb-10 animate-on-scroll">
+        Elekio détient les certifications qui garantissent notre professionnalisme et vous donnent droit aux aides de l'État.
+      </p>
+      <div class="space-y-4">
+        {certifications.map((cert, i) => (
+          <div class="animate-on-scroll bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 flex items-start gap-5" style={`transition-delay: ${i * 0.1}s`}>
+            <div class="w-12 h-12 shrink-0 rounded-xl bg-elekio-copper/10 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c4795b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-elekio-navy text-lg mb-1">{cert.nom}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">{cert.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-elekio-navy">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-4">Envie de travailler avec un électricien qui tient parole ?</h2>
+      <p class="text-white/70 mb-8">Contactez-moi directement. C'est moi qui réponds, c'est moi qui viens.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary !text-lg !px-8 !py-4">Demander un devis</a>
+        <a href="tel:0650505050" class="btn-secondary !text-lg !px-8 !py-4">06 50 50 50 50</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const services = [
+  {
+    titre: 'Dépannage urgent en 4 heures',
+    icone: 'zap',
+    id: 'depannage',
+    description: 'Court-circuit, disjoncteur qui saute, prise qui fume : ne restez pas dans le noir. Notre équipe se déplace dans un rayon de 80 km autour de Saint-Sulpice-la-Pointe pour rétablir votre électricité en urgence. Diagnostic précis, réparation durable, et vous retrouvez la lumière le jour même.',
+    pointsCles: [
+      'Intervention 24h/24 et 7j/7, même le dimanche',
+      'Délai garanti de 4 heures après votre appel',
+      'Camionnette entièrement stockée : 95% des pannes réparées en une seule visite',
+    ],
+  },
+  {
+    titre: 'Installation électrique neuve',
+    icone: 'home',
+    id: 'installation',
+    description: 'Vous faites construire ou vous agrandissez votre maison ? Elekio réalise l\'intégralité de votre installation électrique : du raccordement au réseau jusqu\'à la pose des interrupteurs. Nous travaillons en coordination avec votre maçon, votre plaquiste et votre architecte.',
+    pointsCles: [
+      'Câblage complet, tableau de répartition, mise à la terre',
+      'Respect scrupuleux de la norme NF C 15-100',
+      'Fourniture du Consuel pour la mise en service par Enedis',
+    ],
+  },
+  {
+    titre: 'Rénovation et mise aux normes',
+    icone: 'shield',
+    id: 'renovation',
+    description: 'Maison ancienne, installation des années 70, absence de différentiel 30 mA ? Votre sécurité est en jeu. Nous remettons votre installation électrique en conformité intégrale, sans tout casser : gaines apparentes discrètes, saignées propres et finitions impeccables.',
+    pointsCles: [
+      'Remplacement complet du tableau électrique si nécessaire',
+      'Ajout de prises de terre et liaisons équipotentielles',
+      'Protection différentielle 30 mA sur tous les circuits',
+    ],
+  },
+  {
+    titre: 'Diagnostic électrique et DPE',
+    icone: 'clipboard',
+    id: 'diagnostic',
+    description: 'Vous vendez ou louez un bien ? Le diagnostic électrique est obligatoire pour toute installation de plus de 15 ans. Nous réalisons un état complet en 1 heure, avec rapport détaillé et préconisations chiffrées si des travaux sont nécessaires.',
+    pointsCles: [
+      'Vérification de 120 points de contrôle selon la norme',
+      'Rapport conforme à la réglementation, valable 3 ans',
+      'Devis de remise aux normes fourni sous 48h si anomalies',
+    ],
+  },
+  {
+    titre: 'Mise aux normes du tableau électrique',
+    icone: 'wrench',
+    id: 'tableau',
+    description: 'Un tableau qui date, c\'est un risque d\'incendie et d\'électrocution. On remplace votre vieux tableau à fusibles par un tableau moderne avec interrupteur différentiel, disjoncteurs et parafoudre.',
+    pointsCles: [
+      'Fourniture et pose de marques reconnues (Schneider, Legrand, Hager)',
+      'Étiquetage clair de chaque circuit',
+      'Protection parafoudre incluse dans le Tarn, zone à risque orageux',
+    ],
+  },
+  {
+    titre: 'Domotique et Smart Home',
+    icone: 'lightbulb',
+    id: 'domotique',
+    description: 'Vos volets se ferment automatiquement au coucher du soleil, votre chauffage s\'adapte à votre présence, et vous contrôlez tout depuis votre téléphone. Nous installons des solutions domotiques sur mesure.',
+    pointsCles: [
+      'Solutions compatibles Somfy, Legrand Netatmo, Philips Hue',
+      'Programmation de scénarios personnalisés',
+      'Économie d\'énergie jusqu\'à 25% grâce au pilotage intelligent',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Services Électricité Tarn (81) — Elekio"
+  description="Dépannage, installation, rénovation, diagnostic, tableaux et domotique. Intervention rapide dans le Tarn (81), Haute-Garonne (31) et alentours. Devis gratuit."
+>
+
+  <HeroSection
+    titre="Des prestations électriques sur mesure"
+    sousTitre="De la panne soudaine à la maison connectée, Elekio prend en charge tous vos projets électriques avec le même souci du détail et le respect de votre budget."
+    badges={['6 domaines d\'expertise', 'Norme NF C 15-100', 'Matériel pro']}
+  />
+
+  <!-- Liste services -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="space-y-8">
+        {services.map((s, i) => (
+          <div class="animate-on-scroll" style={`transition-delay: ${i * 0.07}s`}>
+            <ServiceCard
+              titre={s.titre}
+              description={s.description}
+              icone={s.icone}
+              pointsCles={s.pointsCles}
+              id={s.id}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-elekio-navy">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-4">Un projet spécifique ?</h2>
+      <p class="text-white/70 mb-8">Chaque installation est unique. Contactez-moi pour en discuter et obtenir un devis personnalisé.</p>
+      <a href="/contact" class="btn-primary !text-lg !px-10 !py-4">Demander mon devis gratuit</a>
+    </div>
+  </section>
+
+</BaseLayout>

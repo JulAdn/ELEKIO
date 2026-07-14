@@ -1,0 +1,82 @@
+---
+// Footer component
+---
+
+<footer class="bg-elekio-navy text-white/80 pt-16 pb-8 border-t-4 border-elekio-copper">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <!-- Colonne 1 : Logo + présentation -->
+      <div class="lg:col-span-1">
+        <a href="/" class="inline-flex items-center gap-2.5 mb-4 group" aria-label="Elekio">
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#000c42" stroke="#c4795b" stroke-width="4"/>
+            <text x="50" y="68" text-anchor="middle" font-family="Inter, sans-serif" font-weight="900" font-size="52" fill="#c4795b">E</text>
+          </svg>
+          <span class="text-white font-black text-xl"><span class="text-elekio-copper">E</span>lekio</span>
+        </a>
+        <p class="text-sm leading-relaxed text-white/60">
+          Votre électricien de confiance dans le Tarn. Dépannage, installation, rénovation et domotique. Qualifié, assuré, transparent.
+        </p>
+        <div class="flex gap-3 mt-4">
+          <!-- Facebook -->
+          <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-elekio-copper transition-colors" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-elekio-copper transition-colors" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne 2 : Services -->
+      <div>
+        <h3 class="text-white font-bold text-base mb-4 uppercase tracking-wider">Services</h3>
+        <ul class="space-y-2.5">
+          <li><a href="/services#depannage" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">Dépannage express</a></li>
+          <li><a href="/services#installation" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">Installation neuve</a></li>
+          <li><a href="/services#renovation" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">Rénovation électrique</a></li>
+          <li><a href="/services#diagnostic" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">Diagnostic & DPE</a></li>
+          <li><a href="/services#tableau" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">Mise aux normes tableau</a></li>
+          <li><a href="/services#domotique" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">Domotique Smart Home</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 3 : Liens rapides -->
+      <div>
+        <h3 class="text-white font-bold text-base mb-4 uppercase tracking-wider">Infos pratiques</h3>
+        <ul class="space-y-2.5">
+          <li><a href="/about" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">À propos</a></li>
+          <li><a href="/realisations" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">Réalisations</a></li>
+          <li><a href="/faq" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">FAQ</a></li>
+          <li><a href="/contact" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">Contact & Devis</a></li>
+          <li><a href="/mentions-legales" class="text-sm text-white/60 hover:text-elekio-copper transition-colors">Mentions légales</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 4 : Horaires & contact -->
+      <div>
+        <h3 class="text-white font-bold text-base mb-4 uppercase tracking-wider">Horaires</h3>
+        <ul class="space-y-2 text-sm text-white/60">
+          <li class="flex justify-between"><span>Lun — Ven</span><span class="text-white/90 font-medium">7h — 19h</span></li>
+          <li class="flex justify-between"><span>Samedi</span><span class="text-white/90 font-medium">8h — 12h</span></li>
+          <li class="flex justify-between"><span>Dim. & fériés</span><span class="text-elekio-copper font-medium">Urgences</span></li>
+        </ul>
+        <div class="mt-4 pt-4 border-t border-white/10">
+          <a href="tel:0650505050" class="flex items-center gap-2 text-white hover:text-elekio-copper transition-colors font-medium">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            06 50 50 50 50
+          </a>
+          <p class="text-sm text-white/50 mt-1">contact@elekio.fr</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
+      <p>&copy; 2022 — {new Date().getFullYear()} Elekio EURL — Tous droits réservés.</p>
+      <p>Saint-Sulpice-la-Pointe — Tarn (81) — RCS Castres</p>
+    </div>
+  </div>
+</footer>

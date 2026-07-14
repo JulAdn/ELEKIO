@@ -1,0 +1,56 @@
+---
+// Formulaire de contact 3 champs
+---
+
+<form class="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-100" action="/merci" method="POST" netlify netlify-honeypot="bot-field" data-netlify="true" name="contact">
+  <input type="hidden" name="form-name" value="contact" />
+  <p class="hidden" aria-hidden="true">
+    <label>Ne pas remplir <input name="bot-field" /></label>
+  </p>
+
+  <div class="space-y-5">
+    <div>
+      <label for="nom" class="block text-sm font-semibold text-elekio-navy mb-1.5">Votre nom <span class="text-elekio-copper">*</span></label>
+      <input
+        type="text"
+        id="nom"
+        name="nom"
+        required
+        placeholder="Jean Dupont"
+        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-elekio-copper focus:border-transparent transition-all text-gray-900 placeholder:text-gray-400"
+      />
+    </div>
+
+    <div>
+      <label for="tel" class="block text-sm font-semibold text-elekio-navy mb-1.5">Votre téléphone <span class="text-elekio-copper">*</span></label>
+      <input
+        type="tel"
+        id="tel"
+        name="telephone"
+        required
+        placeholder="06 12 34 56 78"
+        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-elekio-copper focus:border-transparent transition-all text-gray-900 placeholder:text-gray-400"
+      />
+    </div>
+
+    <div>
+      <label for="message" class="block text-sm font-semibold text-elekio-navy mb-1.5">Votre message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="Décrivez votre besoin : dépannage, installation, devis..."
+        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-elekio-copper focus:border-transparent transition-all text-gray-900 placeholder:text-gray-400 resize-y"
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary w-full !text-lg !py-4">
+      Envoyer ma demande
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+
+    <p class="text-xs text-gray-400 text-center">
+      Pas de spam, réponse garantie sous 2 heures. Vos données restent privées.
+    </p>
+  </div>
+</form>

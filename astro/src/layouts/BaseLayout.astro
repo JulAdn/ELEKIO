@@ -1,0 +1,164 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileStickyBar from '../components/MobileStickyBar.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  schema?: string;
+}
+
+const {
+  title,
+  description,
+  image = '/og-default.jpg',
+  schema = '',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#000c42" />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="Elekio" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <title>{title}</title>
+
+    <!-- Schema.org -->
+    {schema && <script type="application/ld+json" set:html={schema}></script>}
+
+    <!-- Global styles -->
+    <style is:global>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+      body { color: #111827; background: #faf8f5; }
+      :target { scroll-margin-top: 5rem; }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
+    </style>
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @layer components {
+        .btn-primary {
+          @apply inline-flex items-center justify-center px-6 py-3.5 bg-elekio-copper text-white font-bold rounded-lg
+                 hover:bg-elekio-copper-dark active:scale-[0.98] transition-all duration-200
+                 shadow-lg shadow-elekio-copper/20 text-base;
+        }
+        .btn-secondary {
+          @apply inline-flex items-center justify-center px-6 py-3.5 bg-white text-elekio-navy font-bold rounded-lg
+                 border-2 border-white hover:bg-transparent hover:text-white active:scale-[0.98] transition-all duration-200 text-base;
+        }
+        .btn-outline {
+          @apply inline-flex items-center justify-center px-6 py-3.5 border-2 border-elekio-copper text-elekio-copper font-bold rounded-lg
+                 hover:bg-elekio-copper hover:text-white active:scale-[0.98] transition-all duration-200 text-base;
+        }
+        .badge {
+          @apply inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-white/20;
+        }
+        .section-title {
+          @apply text-3xl md:text-4xl lg:text-5xl font-black text-elekio-navy mb-4;
+        }
+        .section-subtitle {
+          @apply text-lg md:text-xl text-gray-600 max-w-2xl;
+        }
+      }
+
+      @layer utilities {
+        .animate-on-scroll {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .text-gradient {
+          background: linear-gradient(135deg, #c4795b 0%, #e8a87c 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-inter antialiased min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <MobileStickyBar />
+
+    <script is:inline>
+      // Intersection Observer pour animations au scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+      // Hamburger menu toggle
+      const menuBtn = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden', !isOpen);
+          menuBtn.setAttribute('aria-expanded', String(isOpen));
+          document.body.classList.toggle('overflow-hidden', isOpen);
+        });
+      }
+
+      // Smooth scroll pour ancres
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

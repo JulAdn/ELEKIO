@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<BaseLayout
+  title="Contact & Devis Gratuit — Elekio | Électricien Tarn (81)"
+  description="Contactez Elekio, votre électricien dans le Tarn (81). Demandez votre devis gratuit en ligne ou par téléphone au 06 50 50 50 50. Intervention rapide, réponse sous 2h."
+>
+
+  <!-- Hero compact -->
+  <section class="bg-elekio-navy py-14 md:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h1 class="text-3xl md:text-5xl font-black text-white mb-4 animate-fade-in">
+        Parlons de <span class="text-elekio-copper">votre projet</span>
+      </h1>
+      <p class="text-lg text-white/70 animate-slide-up">
+        Un projet ? Une panne ? Une question ? Remplissez le formulaire et je vous réponds personnellement dans les 2 heures. Ou appelez directement : c'est gratuit, et on trouve une solution ensemble.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contenu -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-5 gap-10">
+
+        <!-- Formulaire -->
+        <div class="lg:col-span-3 animate-on-scroll">
+          <h2 class="text-2xl font-black text-elekio-navy mb-6">Formulaire de contact</h2>
+          <ContactForm />
+        </div>
+
+        <!-- Infos -->
+        <div class="lg:col-span-2 animate-on-scroll">
+          <h2 class="text-2xl font-black text-elekio-navy mb-6">Coordonnées</h2>
+
+          <!-- Bloc téléphone -->
+          <div class="bg-elekio-navy rounded-2xl p-6 mb-6">
+            <div class="text-elekio-copper text-sm font-semibold uppercase tracking-wider mb-2">Appelez-nous</div>
+            <a href="tel:0650505050" class="text-2xl font-black text-white hover:text-elekio-copper transition-colors flex items-center gap-3">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              06 50 50 50 50
+            </a>
+            <p class="text-white/50 text-sm mt-2">Réponse directe, 7j/7 pour les urgences</p>
+          </div>
+
+          <!-- Horaires -->
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 mb-6">
+            <h3 class="font-bold text-elekio-navy mb-4 flex items-center gap-2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Horaires d'ouverture
+            </h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex justify-between py-1.5 border-b border-gray-100">
+                <span class="text-gray-600">Lundi — Vendredi</span>
+                <span class="font-semibold text-elekio-navy">7h00 — 19h00</span>
+              </li>
+              <li class="flex justify-between py-1.5 border-b border-gray-100">
+                <span class="text-gray-600">Samedi</span>
+                <span class="font-semibold text-elekio-navy">8h00 — 12h00</span>
+              </li>
+              <li class="flex justify-between py-1.5">
+                <span class="text-gray-600">Dimanche & fériés</span>
+                <span class="font-semibold text-elekio-copper">Urgences uniquement</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Email & Adresse -->
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+            <h3 class="font-bold text-elekio-navy mb-3">Email & adresse</h3>
+            <p class="text-gray-600 text-sm mb-2">
+              <a href="mailto:contact@elekio.fr" class="hover:text-elekio-copper transition-colors">contact@elekio.fr</a>
+            </p>
+            <p class="text-gray-500 text-sm">
+              Elekio EURL<br/>
+              Saint-Sulpice-la-Pointe<br/>
+              81370 — Tarn (81)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA urgence -->
+  <section class="py-16 bg-elekio-navy relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(196,121,91,0.15)_0%,transparent_70%)]" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-4">
+        Un court-circuit à 22h un dimanche soir ?
+      </h2>
+      <p class="text-white/70 mb-8 text-lg">
+        Ne cherchez plus, appelez-moi directement. Oui, je réponds au téléphone. Même le dimanche. Le dépannage d'urgence Elekio, c'est un électricien chez vous en 4 heures maximum.
+      </p>
+      <a href="tel:0650505050" class="btn-secondary !text-lg !px-10 !py-4 inline-flex">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        06 50 50 50 50
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

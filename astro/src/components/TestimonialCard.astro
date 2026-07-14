@@ -1,0 +1,29 @@
+---
+// Témoignage
+export interface Props {
+  prenom: string;
+  ville: string;
+  texte: string;
+  note: number;
+}
+
+const { prenom, ville, texte, note } = Astro.props;
+---
+
+<blockquote class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100">
+  <div class="flex items-center gap-1 mb-4" aria-label={`Note de ${note} sur 5`}>
+    {Array.from({ length: 5 }).map((_, i) => (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill={i < note ? '#c4795b' : '#e5e7eb'} stroke="none" aria-hidden="true">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    ))}
+  </div>
+  <p class="text-gray-600 leading-relaxed italic mb-5">« {texte} »</p>
+  <footer class="flex items-center gap-3 border-t border-gray-100 pt-4">
+    <div class="w-10 h-10 rounded-full bg-elekio-navy flex items-center justify-center text-elekio-copper font-bold text-sm">{prenom[0]}</div>
+    <div>
+      <div class="font-semibold text-elekio-navy text-sm">{prenom}</div>
+      <div class="text-xs text-gray-400">{ville}</div>
+    </div>
+  </footer>
+</blockquote>

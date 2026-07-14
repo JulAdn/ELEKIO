@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+
+const chantiers = [
+  {
+    type: 'Rénovation totale',
+    lieu: 'Gaillac — Maison de village, 120 m²',
+    description: 'Installation électrique d\'origine en fils textiles, aucun différentiel. Remplacement complet en 8 jours ouvrés : nouveau tableau, 45 prises, 20 points lumineux, réseau VDI dans toutes les pièces.',
+    resultat: 'Consuel obtenu sans réserve. Propriétaires rassurés, maison sécurisée pour 30 ans.',
+  },
+  {
+    type: 'Dépannage urgent',
+    lieu: 'Saint-Sulpice-la-Pointe — Pavillon, 90 m²',
+    description: 'Disjoncteur général qui sautait toutes les 10 minutes un samedi soir. Intervention en 2h30 : défaut d\'isolement sur le circuit prises cuisine, localisé et réparé.',
+    resultat: 'Électricité rétablie avant minuit. Client soulagé, barbecue du lendemain sauvé.',
+  },
+  {
+    type: 'Mise aux normes tableau',
+    lieu: 'Lavaur — Appartement, 65 m²',
+    description: 'Tableau à fusibles des années 80, absence de terre sur plusieurs circuits. Remplacement par tableau modulaire avec différentiels et disjoncteurs, mise à la terre ajoutée.',
+    resultat: 'Installation 100% conforme. Délai tenu : 1 journée.',
+  },
+  {
+    type: 'Installation domotique',
+    lieu: 'Albi — Villa contemporaine, 160 m²',
+    description: 'Pilotage complet de l\'éclairage, des volets roulants et du chauffage via smartphone. Installation de 12 interrupteurs connectés, 8 volets motorisés, thermostat intelligent.',
+    resultat: 'Client conquis : 18% d\'économie sur sa facture EDF le premier hiver.',
+  },
+  {
+    type: 'Diagnostic électrique',
+    lieu: 'Toulouse — Maison, 110 m²',
+    description: 'Diagnostic obligatoire avant vente. Installation de 2005 mais plusieurs anomalies détectées : absence de protection différentielle salle de bain, prises non reliées à la terre.',
+    resultat: 'Rapport remis en 24h. Devis de correction à 680€ accepté, travaux réalisés en 2 jours, vente conclue sereinement.',
+  },
+];
+
+const tarifs = [
+  { prestation: 'Dépannage urgent (déplacement + 1h de main d\'œuvre)', prix: '85€ à 140€ TTC' },
+  { prestation: 'Remplacement tableau électrique (fourniture et pose)', prix: '650€ à 1 200€ TTC' },
+  { prestation: 'Installation complète maison neuve 100 m²', prix: '6 500€ à 9 500€ TTC' },
+  { prestation: 'Diagnostic électrique + rapport', prix: '130€ à 180€ TTC' },
+];
+---
+
+<BaseLayout
+  title="Réalisations & Tarifs — Elekio | Électricien Tarn (81)"
+  description="Plus de 600 chantiers réalisés dans le Tarn. Découvrez nos réalisations récentes et nos tarifs transparents. Devis gratuit, prix justes. Dépannage, installation, rénovation."
+>
+
+  <HeroSection
+    titre="Nos réalisations parlent d'elles-mêmes"
+    sousTitre="Plus de 600 chantiers réalisés depuis la création d'Elekio. Du studio à la villa contemporaine, chaque intervention est une preuve de notre savoir-faire."
+    badges={['+600 chantiers', '98% satisfaction', 'Devis transparent']}
+  />
+
+  <!-- Galerie chantiers -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="section-title text-center mb-12 animate-on-scroll">Chantiers <span class="text-elekio-copper">récents</span></h2>
+
+      <div class="space-y-6">
+        {chantiers.map((c, i) => (
+          <div class="animate-on-scroll bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 hover:shadow-lg transition-shadow" style={`transition-delay: ${i * 0.08}s`}>
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+              <div>
+                <span class="inline-block px-3 py-1 bg-elekio-copper/10 text-elekio-copper text-sm font-semibold rounded-full mb-2">{c.type}</span>
+                <h3 class="text-lg font-bold text-elekio-navy">{c.lieu}</h3>
+              </div>
+              <!-- Icône check -->
+              <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center shrink-0" title="Chantier terminé">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-3">{c.description}</p>
+            <div class="flex items-start gap-2 text-sm font-medium text-green-700 bg-green-50 px-4 py-2 rounded-lg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              {c.resultat}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="section-title text-center mb-4 animate-on-scroll">Tarifs <span class="text-elekio-copper">indicatifs</span></h2>
+      <p class="text-center text-gray-600 mb-10 animate-on-scroll max-w-2xl mx-auto">
+        Des prix transparents, sans mauvaise surprise. Chaque devis est détaillé ligne par ligne. Voici des fourchettes pour nos prestations courantes :
+      </p>
+
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden animate-on-scroll">
+        <table class="w-full">
+          <thead class="bg-elekio-navy text-white">
+            <tr>
+              <th class="text-left px-6 py-4 font-semibold text-sm">Prestation</th>
+              <th class="text-right px-6 py-4 font-semibold text-sm whitespace-nowrap">Prix indicatif</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tarifs.map((t, i) => (
+              <tr class={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
+                <td class="px-6 py-4 text-gray-700 text-sm leading-relaxed">{t.prestation}</td>
+                <td class="px-6 py-4 text-right font-bold text-elekio-copper text-sm whitespace-nowrap">{t.prix}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div class="px-6 py-4 bg-gray-50 text-xs text-gray-400 text-center">
+          Ces tarifs sont indicatifs. Un devis précis et gratuit vous sera fourni après visite.
+        </div>
+      </div>
+
+      <div class="text-center mt-10 animate-on-scroll">
+        <a href="/contact" class="btn-primary !text-lg !px-8 !py-4">
+          Obtenir mon devis personnalisé
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
