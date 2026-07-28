@@ -247,7 +247,7 @@ button{touch-action:manipulation}
 .about-photo .photo-label{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);background:var(--copper);color:#fff;padding:8px 20px;border-radius:50px;font-size:.85rem;font-weight:700;white-space:nowrap}
 
 /* ===== GALERIE RÉALISATIONS ===== */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-grid{display:grid!important;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .project-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;transition:var(--transition)}
 .project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
