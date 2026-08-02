@@ -158,67 +158,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3 style="font-size:1.3rem;font-weight:800;color:var(--navy);margin-bottom:6px">Demande de devis gratuit</h3>
           <p style="color:var(--gray-500);font-size:.9rem;margin-bottom:24px">Remplissez ce formulaire, je vous réponds sous <strong>24h</strong> avec un devis détaillé.</p>
 
-          <form action="https://formsubmit.co/contact@elekio.fr" method="POST" style="display:flex;flex-direction:column;gap:16px">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_subject" value="Nouveau devis Elekio depuis le site">
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-              <div>
-                <label style="display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:6px">Nom <span style="color:#dc2626">*</span></label>
-                <input type="text" name="nom" required placeholder="Votre nom" style="width:100%;padding:12px 16px;border:1.5px solid #dde1e8;border-radius:8px;font-size:.95rem;font-family:inherit;outline:none;transition:border-color .25s;background:#fff" onfocus="this.style.borderColor='#c4795b'">
-              </div>
-              <div>
-                <label style="display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:6px">Prénom</label>
-                <input type="text" name="prenom" placeholder="Votre prénom" style="width:100%;padding:12px 16px;border:1.5px solid #dde1e8;border-radius:8px;font-size:.95rem;font-family:inherit;outline:none;transition:border-color .25s;background:#fff" onfocus="this.style.borderColor='#c4795b'">
-              </div>
-            </div>
-
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-              <div>
-                <label style="display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:6px">Email <span style="color:#dc2626">*</span></label>
-                <input type="email" name="email" required placeholder="votre@email.fr" style="width:100%;padding:12px 16px;border:1.5px solid #dde1e8;border-radius:8px;font-size:.95rem;font-family:inherit;outline:none;transition:border-color .25s;background:#fff" onfocus="this.style.borderColor='#c4795b'">
-              </div>
-              <div>
-                <label style="display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:6px">Téléphone <span style="color:#dc2626">*</span></label>
-                <input type="tel" name="telephone" required placeholder="06 XX XX XX XX" style="width:100%;padding:12px 16px;border:1.5px solid #dde1e8;border-radius:8px;font-size:.95rem;font-family:inherit;outline:none;transition:border-color .25s;background:#fff" onfocus="this.style.borderColor='#c4795b'">
-              </div>
-            </div>
-
-            <div>
-              <label style="display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:6px">Code postal <span style="color:#dc2626">*</span></label>
-              <input type="text" name="code_postal" required placeholder="Ex: 81370" style="width:100%;padding:12px 16px;border:1.5px solid #dde1e8;border-radius:8px;font-size:.95rem;font-family:inherit;outline:none;transition:border-color .25s;background:#fff;max-width:200px" onfocus="this.style.borderColor='#c4795b'">
-              <span style="font-size:.78rem;color:var(--gray-400);margin-top:4px;display:block">Pour confirmer que vous êtes dans ma zone d'intervention</span>
-            </div>
-
-            <div>
-              <label style="display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:6px">Type de projet</label>
-              <select name="service" style="width:100%;padding:12px 16px;border:1.5px solid #dde1e8;border-radius:8px;font-size:.95rem;font-family:inherit;outline:none;background:#fff;transition:border-color .25s" onfocus="this.style.borderColor='#c4795b'">
-                <option value="">-- Sélectionnez --</option>
-                <option>Dépannage urgence</option>
-                <option>Devis installation neuve</option>
-                <option>Devis rénovation / mise aux normes</option>
-                <option>Tableau électrique</option>
-                <option>Petits travaux électriques</option>
-                <option>Autre (précisez dans le message)</option>
-              </select>
-            </div>
-
-            <div>
-              <label style="display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:6px">Votre message <span style="color:#dc2626">*</span></label>
-              <textarea name="message" required rows="5" placeholder="Décrivez votre projet, l'urgence, la surface, le type de logement..." style="width:100%;padding:12px 16px;border:1.5px solid #dde1e8;border-radius:8px;font-size:.95rem;font-family:inherit;outline:none;resize:vertical;background:#fff;transition:border-color .25s" onfocus="this.style.borderColor='#c4795b'"></textarea>
-            </div>
-
-            <div style="display:flex;align-items:flex-start;gap:8px">
-              <input type="checkbox" id="consent" name="consent" required style="width:18px;height:18px;margin-top:3px;accent-color:#c4795b">
-              <label for="consent" style="font-size:.82rem;color:var(--gray-500)">J'accepte que mes données soient utilisées pour être recontacté dans le cadre de ma demande de devis. <a href="#" style="color:var(--copper);text-decoration:underline">Politique de confidentialité</a></label>
-            </div>
-
-            <button type="submit" class="btn btn-copper" style="width:100%;justify-content:center;padding:16px;font-size:1.05rem">📄 Envoyer ma demande de devis gratuit</button>
-          </form>
-
-          <p style="font-size:.78rem;color:var(--gray-400);margin-top:16px;text-align:center;display:flex;align-items:center;justify-content:center;gap:4px">
-            🔒 Vos données sont confidentielles. Jamais de spam.
+          <!-- Formulaire de demande Interfast — les demandes arrivent directement dans l'ERP (CRM + planning) -->
+          <div style="background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e5e7eb">
+            <iframe src="https://app.inter-fast.fr/public/company/98A6EA/request/forms/f8bb0561-2297-4eeb-8820-3c252e402a19" style="width:100%;min-height:780px;border:0;display:block" title="Demande de devis en ligne ELEKIO" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p style="font-size:.85rem;color:var(--gray-500);margin-top:12px;text-align:center">
+            Le formulaire ne s'affiche pas ? 
+            <a href="https://app.inter-fast.fr/public/company/98A6EA/request/forms/f8bb0561-2297-4eeb-8820-3c252e402a19" target="_blank" rel="noopener" style="color:var(--copper);font-weight:600">Ouvrir la demande de devis dans un nouvel onglet</a>
+            — ou appelez-moi au <a href="tel:0680506709" style="color:var(--copper);font-weight:600">06 80 50 67 09</a>.
+          </p>
+          <p style="font-size:.78rem;color:var(--gray-400);margin-top:8px;text-align:center">
+            🔒 Vos données sont transmises directement à ELEKIO (ERP Interfast). Jamais de spam.
           </p>
         </div>
       </div>
