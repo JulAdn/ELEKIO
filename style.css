@@ -130,10 +130,10 @@ button{touch-action:manipulation}
 .zone-map{width:100%;border-radius:var(--radius);overflow:hidden;border:1px solid #e5e7eb;box-shadow:var(--shadow-sm);background:#fff;line-height:0}
 .zone-map iframe{width:100%;height:340px;border:0;display:block}
 .zone-map-caption{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;font-size:.85rem;color:var(--gray-600);background:var(--bg-cream);border-top:1px solid #e5e7eb;line-height:1.4}
-.zone-villes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.zone-ville{background:var(--bg-cream);border:1px solid #e5e7eb;border-radius:var(--radius-sm);padding:14px 18px;display:flex;align-items:center;gap:10px;transition:var(--transition);font-size:.9rem;font-weight:500;color:var(--gray-700)}
-.zone-ville:hover{border-color:var(--copper);background:rgba(196,121,91,.05);transform:translateY(-2px)}
-.zone-ville .pin{color:var(--copper)}
+.zone-villes{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;row-gap:2px;font-size:.8rem;line-height:1.8;color:var(--gray-500);text-align:center}
+.zone-villes a{color:var(--navy);text-decoration:underline;text-underline-offset:2px;font-weight:500;transition:var(--transition)}
+.zone-villes a:hover{color:var(--copper)}
+.zone-villes > *:not(:last-child)::after{content:'·';margin:0 5px;color:var(--gray-400)}
 .zone-departements{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
 .zone-dep{display:flex;align-items:center;gap:8px;background:var(--bg-cream);border:1px solid #e5e7eb;border-radius:50px;padding:10px 20px;font-size:.85rem;font-weight:600;color:var(--navy);transition:var(--transition)}
 .zone-dep:hover{border-color:var(--copper);background:rgba(196,121,91,.05)}
@@ -198,7 +198,6 @@ button{touch-action:manipulation}
   .section{padding:60px 0}
   .section-title{font-size:1.6rem}
   .services-grid{grid-template-columns:1fr}
-  .zone-villes{grid-template-columns:repeat(2,1fr)}
   .cta-title{font-size:1.9rem}
   .footer-grid{grid-template-columns:1fr;gap:32px}
   .btn{width:100%;justify-content:center}
@@ -209,7 +208,6 @@ button{touch-action:manipulation}
   .container{padding:0 16px}
   .page-hero h1{font-size:1.6rem}
   .section-title{font-size:1.4rem}
-  .zone-villes{grid-template-columns:1fr}
   .cta-title{font-size:1.5rem}
   .hero h1{font-size:1.6rem}
   .hero-card{padding:24px}
