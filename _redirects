@@ -7,13 +7,14 @@ https://elekio.fr/* https://www.elekio.fr/:splat 301
 /about /a-propos 301
 /contact.html /contact 301
 /faq.html /faq 301
-/guide.html /guide 301
 /realisations.html /realisations 301
 /avis.html /avis 301
 /mentions-legales.html /mentions-legales 301
 /merci.html /merci 301
-/guide.html /guide 301
-/index.html / 301
+/guide.html /blog 301
+/guide /blog 301
+/blog.html /blog 301
+/blog/installation-electrique-aux-normes-8-signes.html /blog/installation-electrique-aux-normes-8-signes 301
 /villes/electricien-albi.html /villes/electricien-albi 301
 /villes/electricien-balma.html /villes/electricien-balma 301
 /villes/electricien-castanet.html /villes/electricien-castanet 301

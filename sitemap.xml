@@ -25,10 +25,16 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.elekio.fr/guide.html</loc>
-    <lastmod>2026-07-31</lastmod>
+    <loc>https://www.elekio.fr/blog.html</loc>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.elekio.fr/blog/installation-electrique-aux-normes-8-signes.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.elekio.fr/a-propos/</loc>
