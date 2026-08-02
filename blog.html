@@ -211,6 +211,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 // ===== BLOG : génération des boutons de filtre + filtrage =====
 var cards = document.querySelectorAll(".blog-card");
 var filterBar = document.getElementById("blogFilter");
+// Bouton « Tous » : attacher le listener (créé en dur dans le HTML)
+var tousBtn = document.querySelector(".filter-btn[data-tag=\"tous\"]");
+if (tousBtn) { tousBtn.addEventListener("click", function(){ setFilter("tous", this); }); }
 var tags = ["tous"];
 cards.forEach(function(c){var t=c.getAttribute("data-tag");if(tags.indexOf(t)===-1){tags.push(t);}});
 tags.forEach(function(tag, i){
