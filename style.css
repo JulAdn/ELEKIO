@@ -323,3 +323,18 @@ body{background:#faf8f5!important;color:#1e293b!important}
 .footer h4,.footer p,.footer li,.footer a{color:inherit!important}
 
 /* Header - écrans larges : pas de surcharge nécessaire (white area = logo) */
+
+/* ===== FAQ accordéon — global (home + villes) ===== */
+.faq-grid{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);transition:var(--transition)}
+.faq-item:hover{border-color:#d1d5db;box-shadow:var(--shadow-sm)}
+.faq-item.active{border-color:var(--copper-light);box-shadow:var(--shadow-md)}
+.faq-q{width:100%;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:none;cursor:pointer;font-size:1rem;font-weight:600;color:var(--navy);text-align:left;font-family:inherit;transition:var(--transition)}
+.faq-q:hover{color:var(--copper)}
+.faq-q .faq-toggle{font-size:1.25rem;line-height:1;color:var(--copper);transition:var(--transition);flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(196,121,91,.14)}
+.faq-item.active .faq-q .faq-toggle{transform:rotate(45deg);background:var(--copper);color:#fff}
+.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .35s ease, padding .35s ease}
+.faq-item.active .faq-a{max-height:420px;padding:0 24px 22px}
+.faq-a p{color:var(--gray-600);font-size:.92rem;line-height:1.7}
+.faq-a a{color:var(--copper-dark);font-weight:600}
+@media(max-width:480px){.faq-q{padding:16px 18px;font-size:.95rem}.faq-a{padding:0 18px}.faq-item.active .faq-a{padding:0 18px 18px}}
