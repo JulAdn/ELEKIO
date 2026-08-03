@@ -1,0 +1,15 @@
+{
+  "name": "Elekio — Électricien Tarn (81)",
+  "short_name": "Elekio",
+  "description": "Électricien Tarn 81 — dépannage urgence 4h, installation neuve, rénovation aux normes. Devis gratuit sous 24h.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000c42",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
