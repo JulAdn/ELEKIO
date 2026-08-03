@@ -155,8 +155,8 @@ button{touch-action:manipulation}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px}
 .footer-brand .logo{margin-bottom:16px}
 .footer-brand p{font-size:.88rem;line-height:1.7;max-width:300px}
-.footer h4{color:var(--navy);font-size:1rem;font-weight:700;margin-bottom:20px;position:relative;padding-bottom:10px}
-.footer h4::after{content:'';position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--copper)}
+.footer h3,.footer h2{color:var(--navy);font-size:1rem;font-weight:700;margin-bottom:20px;position:relative;padding-bottom:10px}
+.footer h3::after,.footer h2::after{content:'';position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--copper)}
 .footer ul li{margin-bottom:10px}
 .footer ul li a{color:var(--gray-500);font-size:.88rem;transition:var(--transition);display:inline-flex;align-items:center;gap:6px}
 .footer ul li a:hover{color:var(--copper);transform:translateX(3px)}
@@ -258,7 +258,7 @@ button{touch-action:manipulation}
 .project-img-icon{font-size:2rem;opacity:.5}
 .project-label{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.55);color:#fff;font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:4px;backdrop-filter:blur(4px)}
 .project-info{padding:20px}
-.project-info h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.project-info h3,.project-info h2{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:6px}
 .project-info p{font-size:.85rem;color:var(--gray-500);line-height:1.6;margin-bottom:10px}
 .project-tag{display:inline-block;background:var(--bg-cream);color:var(--copper);font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:50px}
 @media(max-width:768px){
@@ -320,7 +320,7 @@ button{touch-action:manipulation}
 body{background:#faf8f5!important;color:#1e293b!important}
 .footer{background:#ffffff!important;color:#475569!important}
 .footer-bottom{border-top-color:#e5e7eb!important}
-.footer h4,.footer p,.footer li,.footer a{color:inherit!important}
+.footer h3,.footer h2,.footer p,.footer li,.footer a{color:inherit!important}
 
 /* Header - écrans larges : pas de surcharge nécessaire (white area = logo) */
 

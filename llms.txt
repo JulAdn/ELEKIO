@@ -1,36 +1,31 @@
-# Elekio — Électricien Général Tarn 81
+# Elekio — Électricien à Saint-Sulpice-la-Pointe (Tarn 81)
 
-## Entreprise
-- Nom : Elekio
-- Gérant : Julian Audouin (BTS Électrotechnique)
-- Statut : EURL
-- Adresse : 625 route de Saint-Lieux, 81370 Saint-Sulpice-la-Pointe, Tarn, France
-- Téléphone : 06 80 50 67 09
-- Email : contact@elekio.fr
-- Site : https://elekio.fr
+Elekio est un artisan électricien basé à Saint-Sulpice-la-Pointe (81370, Tarn, France). Dépannage d'urgence sous 4h, installation électrique neuve, rénovation et mise aux normes, devis gratuit sous 24h. Garantie décennale.
 
 ## Services
-- Dépannage électrique urgent (intervention moins de 4h)
-- Installation électrique neuve
-- Rénovation électrique complète
-- Diagnostic / DPE électricité
-- Remplacement et mise aux normes tableaux électriques
-- Petits travaux électriques
+
+- Dépannage électrique d'urgence (intervention sous 4h, 7j/7)
+- Installation électrique neuve et construction
+- Rénovation électrique et mise aux normes (NF C 15-100)
+- Remplacement de tableau électrique
+- Diagnostic et mise en sécurité
+- Petits travaux
+
+## Contact
+
+- Téléphone : 06 80 50 67 09
+- Email : contact@elekio.fr
+- Adresse : 625 route de Saint-Lieux, 81370 Saint-Sulpice-la-Pointe
+- Site web : https://www.elekio.fr
 
 ## Zones d'intervention
-Tarn (81), Haute-Garonne (31), Tarn-et-Garonne (82), Aveyron (12), Hérault (34)
-Communes : Saint-Sulpice-la-Pointe, Albi, Castres, Graulhet, Lavaur, Mazamet
 
-## Pages importantes
-- Accueil : https://elekio.fr/
-- Services : https://elekio.fr/services.html
-- À propos : https://elekio.fr/about.html
-- FAQ : https://elekio.fr/faq.html
-- Contact : https://elekio.fr/contact.html
-- Tarifs & Devis : https://elekio.fr/realisations.html
+Saint-Sulpice-la-Pointe et tout le Tarn (81) : Lavaur, Albi, Castres, Gaillac, Graulhet, Mazamet. Toulouse et sa périphérie (31), Tarn-et-Garonne (82), Aveyron (12), Hérault (34).
 
-## Points différenciants
-- Intervention urgence 4h garantie
-- Artisan local du Tarn, disponible 7j/7
-- Devis gratuit
-- Pas de sous-traitance
+## Pages principales
+
+- Accueil : https://www.elekio.fr/
+- Services : https://www.elekio.fr/services
+- Devis et contact : https://www.elekio.fr/contact
+- Questions fréquentes : https://www.elekio.fr/faq
+- Blog : https://www.elekio.fr/blog

@@ -1,0 +1,18 @@
+# Cache long pour les assets statiques (versionnés via ?v= à chaque modif)
+/style.css
+  Cache-Control: public, max-age=31536000
+
+/*.webp
+  Cache-Control: public, max-age=31536000
+
+/*.png
+  Cache-Control: public, max-age=31536000
+
+/*.ico
+  Cache-Control: public, max-age=31536000
+
+/icons/*
+  Cache-Control: public, max-age=31536000
+
+/site.webmanifest
+  Cache-Control: public, max-age=31536000
